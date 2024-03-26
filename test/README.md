@@ -9,7 +9,7 @@
 | Project Detail | Data Link |
 |:---------------:|:---------:|
 | [Yelp Data Analysis](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/Yelp_Data_Analysis) | [Link](https://drive.google.com/drive/folders/1IjAxEdUHANtt-gs9AuF-hoKSQv8bxK-X?usp=drive_link) |
-| [AB Testing]([https://github.com/datoujinggzj/DS_Project_Portfolio/tree/main/ABtest](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/ABtest) | [Link](https://drive.google.com/drive/folders/1BUx-tWf8rn2cTpcAkfoC0dzP4D-ES7QP?usp=drive_link) |
+| [AB Testing](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/ABtest) | [Link](https://drive.google.com/drive/folders/1BUx-tWf8rn2cTpcAkfoC0dzP4D-ES7QP?usp=drive_link) |
 | [Cashflow Forecasting](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/CashFlow_Forecasting) | [Link](https://drive.google.com/drive/folders/1Y0ts5BbmGLXMe9WSRl_d-LI45MWEFa4o?usp=drive_link) |
 | [News RecSys](https://github.com/datoujinggzj/DS_Project_Portfolio/tree/main/recommender_system) | [Link](https://drive.google.com/drive/folders/1LrT2WKYZksDkVkp710fpFRZVIwu9PAxf?usp=drive_link) |
 
