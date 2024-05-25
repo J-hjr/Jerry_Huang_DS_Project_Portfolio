@@ -1,5 +1,6 @@
 # Empowering User Experience - Optimizing Product Recommendations through AB Testing
 
+未完善！！！需要改！！！
 
 <p>
   <img src="https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/8499b84a-99b9-4890-b316-f5f4cd900bec" alt="Image" width="250" height="250">
