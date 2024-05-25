@@ -1,4 +1,6 @@
 需要后续更改一下，暂时套了一个模版，把capstone的instruction复制过来了，但是需要更多格式上的调整
+出了成绩之后，如果没有满分就和老师对一下答案，report也重新修改一下。所以暂时放上来的report分数没确定
+
 # Spotify Song Popularity Analysis
 ![image](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/assets/158063353/e6eb6969-973a-40ef-9c4d-d1c342bbd22a)
 
