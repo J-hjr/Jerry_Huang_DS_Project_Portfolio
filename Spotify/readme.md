@@ -4,6 +4,10 @@
 # Spotify Song Popularity Analysis
 ![image](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/assets/158063353/e6eb6969-973a-40ef-9c4d-d1c342bbd22a)
 
+| Project Detail | Data Link | Report Link |
+|:---------------:|:---------:|:---------:|
+| [Spotify](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/Spotify) | [Link](https://drive.google.com/drive/folders/1fTegCMoLUX1kmEcOu6uF1shaHXY8ZbeZ) | [Report Link](https://drive.google.com/drive/folders/1iqr5GBJ63totAOcuIC9Fm7XpxEzZ0Azy)
+
 ## Overview
 This project is part of the Data Science Capstone (DS UA 112) at `New York University`. It involved performing a comprehensive analysis on a dataset of 52,000 songs from Spotify to understand the factors influencing song popularity and the characteristics defining music genres.
 
