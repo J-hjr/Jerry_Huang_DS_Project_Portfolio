@@ -9,7 +9,7 @@ Summary: 我在什么时间做好的，后续加
 | [Spotify](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/Spotify) | [Link](https://drive.google.com/drive/folders/1fTegCMoLUX1kmEcOu6uF1shaHXY8ZbeZ) |
 | [Yelp Data Analysis](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/Yelp_Data_Analysis) | [Link](https://drive.google.com/drive/folders/1EFwoFE55A2rtDRsnGJCiDG58cen3rQFZ) |
 | [AB Testing](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/ABtest) | [Link](https://drive.google.com/drive/folders/1PFIw57D5BoIq7pJnYgKpPL_8nnw4gbOF) |
-| [Cashflow Forecasting](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/CashFlow_Forecasting) | [Link](https://drive.google.com/drive/folders/1Y0ts5BbmGLXMe9WSRl_d-LI45MWEFa4o?usp=drive_link) |
+| [Cashflow Forecasting](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/CashFlow_Forecasting) | [Link](https://drive.google.com/drive/folders/1DdCTbNL8z8ID8PJxwpm5xj2LjZ5WzVx2) |
 | [News RecSys](https://github.com/datoujinggzj/DS_Project_Portfolio/tree/main/recommender_system) | [Link](https://drive.google.com/drive/folders/1LrT2WKYZksDkVkp710fpFRZVIwu9PAxf?usp=drive_link) |
 
 
