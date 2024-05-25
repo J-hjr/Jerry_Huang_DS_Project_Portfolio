@@ -1,6 +1,6 @@
 # Jerry_Huang_DS_Project_Portfolio
 
-Summary: 我在。。。时间
+Summary: 我在什么时间做好的，后续加
 
 ## Unveiling Business Insights - A Comprehensive Data Analysis of Yelp Dataset
 
@@ -14,3 +14,4 @@ Summary: 我在。。。时间
 
 - [Project Summary](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/Yelp_Data_Analysis)
 - [Data](https://drive.google.com/drive/folders/1EFwoFE55A2rtDRsnGJCiDG58cen3rQFZ)
+- [Code]后续加链接
