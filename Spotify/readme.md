@@ -31,5 +31,3 @@ The dataset includes data on 52,000 songs with features like artist name, album,
 
 ## Conclusion
 The project highlights the complex nature of musical preferences and the challenges in predicting song popularity based on audio features alone. The findings could help Spotify tailor their song recommendations and improve user engagement.
-
-## Repository Structure
