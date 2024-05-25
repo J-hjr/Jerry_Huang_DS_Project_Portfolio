@@ -1,7 +1,7 @@
 # Jerry_Huang_DS_Project_Portfolio
 
 Summary: 我在什么时间做好的，后续加
-
+spotify的项目添加了report和data，但还是期末没被grading过的成绩，之后可以考虑删改，其他的项目coding还未添加
 
 以下的超链接都已经更新完了，不过要确认每个dataset对应的project
 | Project Detail | Data Link |
