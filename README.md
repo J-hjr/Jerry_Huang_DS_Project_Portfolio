@@ -3,7 +3,7 @@
 Summary: 我在什么时间做好的，后续加
 
 
-以下的超链接我只暂时更新了Yelp
+以下的超链接我只暂时更新了Yelp和Spotify
 | Project Detail | Data Link |
 |:---------------:|:---------:|
 | [Yelp Data Analysis](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/Yelp_Data_Analysis) | [Link](https://drive.google.com/drive/folders/1EFwoFE55A2rtDRsnGJCiDG58cen3rQFZ) |
