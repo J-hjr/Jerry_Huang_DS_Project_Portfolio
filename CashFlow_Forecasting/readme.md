@@ -1,5 +1,6 @@
 # Revolutionizing Cash Flow Forecasts - A Paradigm Shift in Purchase and Redemption Predictions
 
+未完善！！！需要改！！！
 <p align="center">
   <img src="https://www.freshbooks.com/wp-content/uploads/2021/09/cash-inflow-vs-outflow.jpg" alt="Image" width="700" height="400">
 </p>
