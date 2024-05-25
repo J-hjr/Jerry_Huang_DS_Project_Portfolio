@@ -1,5 +1,6 @@
 需要后续更改一下，暂时套了一个模版，把capstone的instruction复制过来了，但是需要更多格式上的调整
 # Spotify Song Popularity Analysis
+![image](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/assets/158063353/e6eb6969-973a-40ef-9c4d-d1c342bbd22a)
 
 ## Overview
 This project is part of the Data Science Capstone (DS UA 112) at [Your University's Name]. It involved performing a comprehensive analysis on a dataset of 52,000 songs from Spotify to understand the factors influencing song popularity and the characteristics defining music genres.
