@@ -12,4 +12,5 @@ Summary: 我在。。。时间
 - Leveraged Python TextBlob library to conduct sentiment analysis on a massive corpus of 5.26 million reviews, utilized seaborn and wordcloud to visualize the polarity of elite and regular review.
 - Analyzed the reports with Tableau and PowerBI to derive actionable insights, resulting in a significant 12% increase in elite user retention.
 
-- [Project Summary]
+- [Project Summary](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/Yelp_Data_Analysis)
+- [Data](https://drive.google.com/drive/folders/1EFwoFE55A2rtDRsnGJCiDG58cen3rQFZ)
