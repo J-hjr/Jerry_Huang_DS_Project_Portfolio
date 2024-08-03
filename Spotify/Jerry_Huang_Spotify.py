@@ -29,7 +29,7 @@ from sklearn.metrics import roc_curve, roc_auc_score
 from statsmodels.formula.api import ols
 #%% Data Processing
 # Loading files
-df = pd.read_csv("spotify52kData.csv")
+df = pd.read_csv("/Users/itsnotjerryh/Desktop/NYU/Sophomore 2/DS/Capstone/spotify52kData.csv")
 
 # Try to see if there is any missing value
 missing_values = df.isnull().sum()
@@ -184,9 +184,13 @@ print(implicit.describe())
 major = df[df['mode'] == 1]['popularity']
 minor = df[df['mode'] == 0]['popularity']
 
+
 u, p = stats.mannwhitneyu(major, minor, alternative='greater')
 print("Mann-Whitney U test statistic:", u)
 print("P-value:", p)
+
+
+print(stats.kstest(major,minor))
 
 print(major.describe())
 print(minor.describe())
@@ -314,6 +318,7 @@ y = df['mode']
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size= 0.2, random_state=13133910)
 
+# logRegModel = LogisticRegression(class_weight='balanced')
 logRegModel = LogisticRegression()
 logRegModel.fit(X, y)
 
@@ -343,6 +348,16 @@ plt.xlabel('False Positive Rate')
 plt.ylabel('True Positive Rate')
 plt.title('Receiver Operating Characteristic')
 plt.legend(loc="lower right")
+plt.show()
+
+# Logistic Regression Plot
+plt.figure()
+plt.scatter(X, y, color='blue', label='Data')
+plt.plot(X_test, y_predProb, color='red', linewidth=2, label='Logistic Regression')
+plt.xlabel('Valence')
+plt.ylabel('Probability of Major Key')
+plt.title('Logistic Regression Fit')
+plt.legend()
 plt.show()
 
 # Comment: i need to change features to predict valence, so let's run through again
