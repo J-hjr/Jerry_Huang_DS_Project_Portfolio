@@ -26,7 +26,7 @@ spotify的项目添加了report和data，但还是期末没被grading过的成�
 
 - [Project Summary](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/Yelp_Data_Analysis)
 - [Data](https://drive.google.com/drive/folders/1EFwoFE55A2rtDRsnGJCiDG58cen3rQFZ)
-- [Code]后续加链接
+- [Code](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/Yelp_Data_Analysis)
 
 <p>
   <img src="https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/08f41980-091c-4534-889e-bd8adbb1cb88" alt="Image" width="400" height="250">
