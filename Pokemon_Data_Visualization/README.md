@@ -42,9 +42,3 @@ The dataset used in this project contains information on various Pokémon, inclu
 
 - The dashboard provides a user-friendly interface to explore the relative strengths and weaknesses of different Pokémon.
 - The analysis reveals how certain Pokémon types dominate in specific stats, offering insights into strategic decisions in Pokémon battles.
-
-### How to Use
-
-- Clone this repository or download the files directly.
-- Open the Tableau workbook (`Pokemon.twb`) to interact with the dashboard.
-- Alternatively, explore the visualizations in the included PNG image (`Pokemon_Dashboard.png`) for a static view.
