@@ -12,8 +12,7 @@ spotify的项目添加了report和data，但还是期末没被grading过的成�
 | [AB Testing](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/ABtest) | [Link](https://drive.google.com/drive/folders/1PFIw57D5BoIq7pJnYgKpPL_8nnw4gbOF) |
 | [Cashflow Forecasting](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/CashFlow_Forecasting) | [Link](https://drive.google.com/drive/folders/1DdCTbNL8z8ID8PJxwpm5xj2LjZ5WzVx2) |
 | [News RecSys](https://github.com/datoujinggzj/DS_Project_Portfolio/tree/main/recommender_system) | [Link](https://drive.google.com/drive/folders/1QgIzI9cXdcpChdM7z6sXhQClL0z0b8sz) | 
-| [Pokémon Data Visualization](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/Pokemon_Data_Visualization) | [Link]
-(https://drive.google.com/drive/folders/1ZaPSj-JpwN0hbEd5a8KR73miCqsIS-2M) |
+| [Pokémon Data Visualization](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/Pokemon_Data_Visualization) | [Link](https://drive.google.com/drive/folders/1ZaPSj-JpwN0hbEd5a8KR73miCqsIS-2M) |
 
 
 ## Unveiling Business Insights - A Comprehensive Data Analysis of Yelp Dataset ![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/b791ea9e-195e-4107-b665-49d060becf52)
