@@ -2,6 +2,10 @@
 
 ![image](https://github.com/user-attachments/assets/982d7a62-a201-4ef4-8a4b-6f3af2270160)
 
+| Project Detail | Data Link | Report Link |
+|:---------------:|:---------:|:---------:|
+| [Spotify](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/Spotify) | [Link](https://drive.google.com/drive/folders/1fTegCMoLUX1kmEcOu6uF1shaHXY8ZbeZ) | [Report Link](https://drive.google.com/drive/folders/1iqr5GBJ63totAOcuIC9Fm7XpxEzZ0Azy)
+
 ### Project Overview
 
 This project is a comprehensive data visualization dashboard created using Tableau to explore various attributes of Pokémon. The dashboard provides an interactive way to analyze Pokémon data based on their stats, types, and other characteristics. This project demonstrates how data visualization techniques can be applied to reveal patterns and insights within a well-known dataset.
