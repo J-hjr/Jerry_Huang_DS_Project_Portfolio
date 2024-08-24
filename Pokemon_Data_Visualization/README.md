@@ -1,5 +1,7 @@
 # Pokémon Data Visualization Dashboard
 
+![image](https://github.com/user-attachments/assets/660dd19d-807d-4ee1-ac08-41fd5ab28fbb)
+
 ### Project Overview
 
 This project is a comprehensive data visualization dashboard created using Tableau to explore various attributes of Pokémon. The dashboard provides an interactive way to analyze Pokémon data based on their stats, types, and other characteristics. This project demonstrates how data visualization techniques can be applied to reveal patterns and insights within a well-known dataset.
