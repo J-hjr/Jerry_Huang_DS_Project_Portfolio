@@ -1,6 +1,6 @@
 # Pokémon Data Visualization Dashboard
 
-![image](https://github.com/user-attachments/assets/660dd19d-807d-4ee1-ac08-41fd5ab28fbb)
+![image](https://github.com/user-attachments/assets/b62d664c-d2a9-4c0f-bb71-7231a4f7e4d0)
 
 ### Project Overview
 
