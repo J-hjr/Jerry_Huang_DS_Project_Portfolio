@@ -1,5 +1,9 @@
 # Pokémon Data Visualization Dashboard
 
+| Project Detail | Data Link |
+|:---------------:|:---------:|
+| [Pokemon](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/Pokemon_Data_Visualization) | [Link](https://drive.google.com/drive/folders/1ZaPSj-JpwN0hbEd5a8KR73miCqsIS-2M) 
+
 
 ## What is Pokémon?
 ![image](https://github.com/user-attachments/assets/982d7a62-a201-4ef4-8a4b-6f3af2270160)
@@ -16,12 +20,6 @@ The Pokémon games are known for their deep gameplay mechanics, which combine el
 In addition to video games, the Pokémon Trading Card Game (TCG) has also become a major aspect of the franchise, allowing fans to collect, trade, and battle with Pokémon cards. The TCG has a vibrant competitive scene, with tournaments held globally.
 
 As a cultural phenomenon, Pokémon has left an indelible mark on popular culture, influencing multiple generations of fans and expanding into numerous forms of media and merchandise. With a fanbase spanning across the globe, Pokémon continues to evolve and captivate audiences of all ages.
-
-
-
-| Project Detail | Data Link |
-|:---------------:|:---------:|
-| [Pokemon](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/Pokemon_Data_Visualization) | [Link](https://drive.google.com/drive/folders/1ZaPSj-JpwN0hbEd5a8KR73miCqsIS-2M) 
 
 ### Project Overview
 
