@@ -2,9 +2,9 @@
 
 ![image](https://github.com/user-attachments/assets/982d7a62-a201-4ef4-8a4b-6f3af2270160)
 
-| Project Detail | Data Link | Report Link |
-|:---------------:|:---------:|:---------:|
-| [Pokemon](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/Pokemon_Data_Visualization) | [Link](https://drive.google.com/drive/folders/1fTegCMoLUX1kmEcOu6uF1shaHXY8ZbeZ) | [Report Link](https://drive.google.com/drive/folders/1iqr5GBJ63totAOcuIC9Fm7XpxEzZ0Azy)
+| Project Detail | Data Link |
+|:---------------:|:---------:|
+| [Pokemon](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/Pokemon_Data_Visualization) | [Link](https://drive.google.com/drive/folders/1ZaPSj-JpwN0hbEd5a8KR73miCqsIS-2M) 
 
 ### Project Overview
 
