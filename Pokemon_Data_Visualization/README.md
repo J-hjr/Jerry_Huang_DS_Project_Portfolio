@@ -1,6 +1,6 @@
 # Pokémon Data Visualization Dashboard
 
-![image](https://github.com/user-attachments/assets/b62d664c-d2a9-4c0f-bb71-7231a4f7e4d0)
+![image](https://github.com/user-attachments/assets/982d7a62-a201-4ef4-8a4b-6f3af2270160)
 
 ### Project Overview
 
@@ -39,6 +39,9 @@ This project is a comprehensive data visualization dashboard created using Table
 ### Data Source
 
 The dataset used in this project contains information on various Pokémon, including their stats, types, and generations. It has been curated from publicly available Pokémon datasets.
+
+![image](https://github.com/user-attachments/assets/b62d664c-d2a9-4c0f-bb71-7231a4f7e4d0)
+
 
 ### Insights and Analysis
 
