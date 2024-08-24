@@ -4,7 +4,7 @@
 
 | Project Detail | Data Link | Report Link |
 |:---------------:|:---------:|:---------:|
-| [Spotify](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/Spotify) | [Link](https://drive.google.com/drive/folders/1fTegCMoLUX1kmEcOu6uF1shaHXY8ZbeZ) | [Report Link](https://drive.google.com/drive/folders/1iqr5GBJ63totAOcuIC9Fm7XpxEzZ0Azy)
+| [Pokemon](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/Pokemon_Data_Visualization) | [Link](https://drive.google.com/drive/folders/1fTegCMoLUX1kmEcOu6uF1shaHXY8ZbeZ) | [Report Link](https://drive.google.com/drive/folders/1iqr5GBJ63totAOcuIC9Fm7XpxEzZ0Azy)
 
 ### Project Overview
 
@@ -30,21 +30,17 @@ This project is a comprehensive data visualization dashboard created using Table
 4. **Stat Comparisons (Attack, Defense, Speed)**  
    Visualized using donut charts to give a quick overview of average values for key battle-related stats across all Pokémon.
 
-### How to View the Dashboard
-
-1. You can view the dashboard directly from the **Pokemon_Dashboard.png** file included in this repository.
-2. To explore the interactive version, download the **Pokemon.twb** file and open it in Tableau.
 
 ### Tools Used
 
 - **Tableau**: For data visualization and dashboard creation.
 - **CSV Data Handling**: Pokémon dataset was managed and imported using a CSV file format.
 
+![image](https://github.com/user-attachments/assets/b62d664c-d2a9-4c0f-bb71-7231a4f7e4d0)
+
 ### Data Source
 
 The dataset used in this project contains information on various Pokémon, including their stats, types, and generations. It has been curated from publicly available Pokémon datasets.
-
-![image](https://github.com/user-attachments/assets/b62d664c-d2a9-4c0f-bb71-7231a4f7e4d0)
 
 
 ### Insights and Analysis
