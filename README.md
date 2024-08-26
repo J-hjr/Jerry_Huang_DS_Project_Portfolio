@@ -1,8 +1,5 @@
 # Jerry_Huang_DS_Project_Portfolio
 
-Summary: 我在什么时间做好的，后续加
-spotify的项目添加了report和data，但还是期末没被grading过的成绩，之后可以考虑删改，其他的项目coding还未添加
-[参考](https://github.com/datoujinggzj/DS_Project_Portfolio)
 
 以下的超链接都已经更新完了，不过要确认每个dataset对应的project
 | Project Detail | Data Link |
@@ -165,6 +162,11 @@ spotify的项目添加了report和data，但还是期末没被grading过的成�
 - Seamlessly integrated the models using stacking and weighted fusion techniques to maximize prediction accuracy.
 
 **Quantifiable Achievements and Impact**
+
+
+Summary: 我在什么时间做好的，后续加
+spotify的项目添加了report和data，但还是期末没被grading过的成绩，之后可以考虑删改，其他的项目coding还未添加
+[参考](https://github.com/datoujinggzj/DS_Project_Portfolio)
 
 - Achieved remarkable improvements in click prediction accuracy, resulting in an impressive 20% increase in click-through rates (CTR).
 - Transformed the news recommendation system into a data-driven powerhouse, enabling personalized and engaging content delivery to users.
