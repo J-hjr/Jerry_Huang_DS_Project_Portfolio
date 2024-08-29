@@ -91,8 +91,7 @@ We can analyze market competition and trends, including information such as the 
 
 ### Sentiment Analysis
 
-![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/019929ee-4d06-48c3-bd91-05261aa4116b)
-
+![image](https://github.com/user-attachments/assets/4b087473-0295-4bb3-815e-3b941a68d559)
 
 It involves using natural language processing techniques to analyze the opinions and emotions expressed in user reviews and ratings. By doing so, we can identify patterns and trends in user sentiment towards different businesses and their products or services, and help businesses improve their products or services to meet customer expectations.
 
