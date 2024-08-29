@@ -26,8 +26,7 @@ Overall, the Yelp dataset is a valuable resource for anyone interested in explor
 
 Data Link: https://drive.google.com/drive/folders/1EFwoFE55A2rtDRsnGJCiDG58cen3rQFZ?usp=drive_link
 
-![image](https://github.com/user-attachments/assets/c0576f41-7096-434b-ae37-8b92b4adfa97)
-
+![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/019929ee-4d06-48c3-bd91-05261aa4116b)
 
 This dataset is a subset of Yelp's businesses, reviews, and user data. It was originally put together for the Yelp Dataset Challenge which is a chance for students to conduct research or analysis on Yelp's data and share their discoveries. In the most recent dataset you'll find information about businesses across 8 metropolitan areas in the USA and Canada.
 
@@ -64,14 +63,14 @@ In summary, using the Yelp dataset for data analysis can provide insights into t
 ### Business Types and Locations
 
 <p align="center">
-  <img src="https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/6dfa5d47-ffdf-4924-86de-df528b12808b" alt="Image" width="400" height="400">
+  <img src="https://github.com/user-attachments/assets/d78b9637-5519-4821-a587-c39071e5fc23" alt="Image" width="400" height="400">
 </p>
 
 We can analyze the number and distribution of businesses in different cities or regions, and understand which types of businesses are most popular and which areas have more businesses. This can help the platform and businesses understand market demand and competition. For example, we can analyze the business category and location information in the Yelp Business dataset, and determine the most popular business types and the most popular business districts in a city or region.
 
 ### User Reviews and Preferences
 
-![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/88c8aefd-108f-43f5-9183-73475534fa1d)
+![image](https://github.com/user-attachments/assets/67acb5e9-4b2d-4692-9224-eabc5826ba27)
 
 
 We can analyze user ratings and reviews of businesses on the Yelp platform, and understand information such as user preferences for business types, service quality, and food taste, which can help businesses better optimize their products and services. For example, we can analyze a business's food taste, service quality, and user feedback through the user reviews and ratings data in the Yelp Review dataset, and help businesses improve or optimize their products and services.
@@ -101,8 +100,9 @@ In addition, sentiment analysis can also be used to predict future user behavior
 ### Network & Community Detection
 
 <p align="center">
-  <img src="https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/1e0f9c49-286c-49c0-ba40-b460b5b719a4" alt="Image" width="400" height="400">
+  <img src="https://github.com/user-attachments/assets/7d795e1f-7860-4045-958c-96aaae5012ff" alt="Image" width="400" height="400">
 </p>
+
 
 It involves using network analysis techniques to identify groups of businesses or users that are closely related to each other based on their interactions on the platform. By doing so, we can identify communities of businesses or users that share similar interests, preferences, or behaviors, and use this information to better understand the dynamics of the Yelp platform.
 
