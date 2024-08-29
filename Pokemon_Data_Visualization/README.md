@@ -53,8 +53,7 @@ This project is a comprehensive data visualization dashboard created using Table
 - **Tableau**: For data visualization and dashboard creation.
 - **CSV Data Handling**: Pokémon dataset was managed and imported using a CSV file format.
 
-![image](https://github.com/user-attachments/assets/64fbf930-3215-4c72-8a02-5337c4edf986)
-
+![image](https://github.com/user-attachments/assets/b62d664c-d2a9-4c0f-bb71-7231a4f7e4d0)
 
 ### Data Source
 
