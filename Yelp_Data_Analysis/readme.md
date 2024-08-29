@@ -26,8 +26,7 @@ Overall, the Yelp dataset is a valuable resource for anyone interested in explor
 
 Data Link: https://drive.google.com/drive/folders/1EFwoFE55A2rtDRsnGJCiDG58cen3rQFZ?usp=drive_link
 
-![image-20230505225633404](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/51f0736c-5d6b-4f78-b20c-72248215a1de)
-
+![image](https://github.com/user-attachments/assets/c0576f41-7096-434b-ae37-8b92b4adfa97)
 
 
 This dataset is a subset of Yelp's businesses, reviews, and user data. It was originally put together for the Yelp Dataset Challenge which is a chance for students to conduct research or analysis on Yelp's data and share their discoveries. In the most recent dataset you'll find information about businesses across 8 metropolitan areas in the USA and Canada.
