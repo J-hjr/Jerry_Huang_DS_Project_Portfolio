@@ -1,7 +1,12 @@
 # Jerry_Huang_DS_Project_Portfolio
 
+Decoding Hit Songs and Features: An In-Depth Analysis of the Spotify Dataset
+Unveiling Business Insights - A Comprehensive Data Analysis of Yelp Dataset
+Empowering User Experience - Optimizing Product Recommendations through AB Testing and UI Enhancements
+Revolutionizing Cash Flow Forecasts - A Paradigm Shift in Purchase and Redemption Predictions
+News Intelligence - Unleashing the Potential of User History for Click Prediction
+Visualizing Pokémon: A Comprehensive Exploration of Pokémon Data
 
-以下的超链接都已经更新完了，不过要确认每个dataset对应的project
 | Project Detail | Data Link |
 |:---------------:|:---------:|
 | [Spotify Popularity Analysis](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/Spotify) | [Link](https://drive.google.com/drive/folders/1fTegCMoLUX1kmEcOu6uF1shaHXY8ZbeZ) |
