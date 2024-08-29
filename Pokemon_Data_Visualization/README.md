@@ -25,8 +25,7 @@ As a cultural phenomenon, Pokémon has left an indelible mark on popular culture
 
 This project is a comprehensive data visualization dashboard created using Tableau to explore various attributes of Pokémon. The dashboard provides an interactive way to analyze Pokémon data based on their stats, types, and other characteristics. This project demonstrates how data visualization techniques can be applied to reveal patterns and insights within a well-known dataset.
 
-![image](https://drive.google.com/file/d/1TGMiqZ_oet--Fn-an8v50xzvZnUbHuMm/view?usp=drive_link)
-
+![Pokemon_Dashboard](https://github.com/user-attachments/assets/fd702dd8-c950-4225-84ef-743144fd6323)
 
 ### Project Files
 
