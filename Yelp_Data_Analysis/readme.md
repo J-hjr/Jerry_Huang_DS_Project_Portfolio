@@ -8,19 +8,18 @@
 ![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/791fbf72-de61-42f0-9e62-7830cca50542)
 
 
-Yelp is an online platform that allows users to search for and browse information about businesses, including their address, phone number, hours of operation, and other details. It also enables users to view reviews and ratings of businesses written by other users, and to write and publish their own reviews and comments. Yelp's review system leverages the power of social networking, encouraging users to share their experiences and opinions about businesses, which helps other users to find better businesses. Yelp was founded in 2004 in the United States and has expanded to other countries including Canada, the United Kingdom, Australia, France, Germany, Italy, and Switzerland, among others.
-
+Yelp is an online platform that enables users to search for and explore detailed information about businesses, including their address, phone number, hours of operation, and more. It also allows users to read and write reviews and ratings, offering insights into the popularity and quality of businesses based on other users' experiences. Yelp's review system harnesses the power of social networking, encouraging users to share their opinions and help others make informed decisions. Additionally, Yelp facilitates connections between users, enhancing the community aspect of the platform. Yelp was founded in 2004 in the United States and has expanded to multiple countries, including Canada, the United Kingdom, Australia, France, Germany, Italy, and Switzerland, among others.
 
 
 ## Background
 
-The Yelp dataset is a collection of data related to businesses, reviews, users, and other interactions on the Yelp platform. The dataset includes information from several cities across the United States, covering a variety of business categories and user demographics.
+Yelp serves as a dynamic community platform where users can explore and discover a wide range of businesses while businesses can enhance their visibility and reach. The platform provides detailed information about businesses, including their location, contact details, hours of operation, and user-generated reviews and ratings. This interaction not only helps consumers make informed decisions but also enables businesses to engage with their customers and respond to feedback.
 
-The purpose of this dataset is to enable researchers, data analysts, and data scientists to explore and analyze the dynamics of the Yelp platform and gain insights into user behavior, business performance, and market trends. With the increasing popularity of online review platforms like Yelp, this dataset provides a valuable resource for understanding the factors that influence customer satisfaction, business success, and platform growth.
+The Yelp dataset captures a wealth of information related to businesses, reviews, and user interactions, offering valuable insights into the dynamics of online reviews and business performance. For researchers, data analysts, and data scientists, this dataset is a valuable resource for studying user behavior, analyzing business communities and market trends, and exploring factors that contribute to business success, customer satisfaction, and overall platform growth.
 
-In addition, the Yelp dataset is a widely used benchmark dataset for evaluating the performance of machine learning algorithms, particularly in the areas of natural language processing, sentiment analysis, and recommendation systems. By providing a large and diverse dataset that reflects real-world interactions and behaviors, the Yelp dataset allows researchers to develop and test new algorithms and models that can be applied to other online platforms and domains.
+Additionally, the Yelp dataset serves as a benchmark for testing and evaluating machine learning algorithms, particularly in the areas of natural language processing, sentiment analysis, and recommendation systems. By providing a diverse and comprehensive dataset that reflects real-world interactions, Yelp enables the development of models and algorithms that can be applied across various online platforms and industries.
 
-Overall, the Yelp dataset is a valuable resource for anyone interested in exploring the dynamics of online review platforms and understanding the factors that influence user behavior, business success, and platform growth.
+Overall, Yelp not only fosters a sense of community by connecting users with businesses and each other but also plays a crucial role in understanding the online marketplace, influencing business growth, and improving user experiences. Let’s dive into it!
 
 ## About Dataset
 
@@ -46,7 +45,7 @@ When we use the Yelp dataset for data analysis, we can analyze the data from the
 
 ### Platform perspective
 
-From the platform's perspective, we can use the Yelp dataset to analyze user behavior and merchant operations, thereby guiding platform operations and marketing strategies. For example, we can analyze popular merchants and user preferences on the Yelp platform to provide more accurate targeting services to merchants and advertising clients. In addition, we can use data to analyze the development of cities to discover new business opportunities and market trends. For example, we can analyze the number and rating of merchants in different cities to understand which cities have more intense market competition and which cities have more promising business opportunities.
+From the perspective of the platform, the Yelp dataset offers valuable insights that can be leveraged to analyze user behavior and merchant operations, ultimately guiding platform operations and marketing strategies. For instance, by analyzing popular merchants and user preferences on the Yelp platform, the platform can provide more accurate targeting services for merchants and advertising clients. Additionally, data analysis can be used to examine the development of cities, uncovering new business opportunities and market trends. For example, analyzing the number and ratings of merchants across different cities can help identify regions with intense market competition as well as those with more promising business opportunities.
 
 ### User perspective
 
