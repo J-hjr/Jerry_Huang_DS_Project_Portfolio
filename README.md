@@ -168,11 +168,6 @@
 
 **Quantifiable Achievements and Impact**
 
-
-Summary: 我在什么时间做好的，后续加
-spotify的项目添加了report和data，但还是期末没被grading过的成绩，之后可以考虑删改，其他的项目coding还未添加
-[参考](https://github.com/datoujinggzj/DS_Project_Portfolio)
-
 - Achieved remarkable improvements in click prediction accuracy, resulting in an impressive 20% increase in click-through rates (CTR).
 - Transformed the news recommendation system into a data-driven powerhouse, enabling personalized and engaging content delivery to users.
 - Enhanced user satisfaction and engagement, fostering a loyal user base and positively impacting the platform's user retention metrics.
