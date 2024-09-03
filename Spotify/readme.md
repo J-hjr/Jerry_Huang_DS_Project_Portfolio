@@ -28,6 +28,7 @@ The dataset includes data on 52,000 songs with features like artist name, album,
 
 ### PCA
 ![image](https://github.com/user-attachments/assets/7fbdc77b-a07f-4bb7-9859-4c66f9233284)
+
 The dimensionality is reduced 70% after I applied PCA and decide to retain 3 principal components using Kaiser Criterion. These 3 components capture 57.36% of the variance. The PCA component loadings highlight which features are most important in each principal component, allowing for more informed decisions about feature selection or further analysis.
 
 
