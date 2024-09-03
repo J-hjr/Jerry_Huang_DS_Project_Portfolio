@@ -32,10 +32,12 @@ The dataset includes data on 52,000 songs with features like artist name, album,
 - **PCA-Enhanced Model:** By utilizing PCA-transformed features, the model's performance in classifying classical music significantly improved, achieving an **AUC of 0.94** and **98% accuracy** in predicting whether a song is classical or not.
 - **Class Imbalance Adjustments:** After recognizing and addressing the class imbalance in the dataset, the model's recall for classical songs improved to 0.95, ensuring that the majority of classical songs were correctly identified. However, this came at the cost of lower precision, indicating an increase in false positives.
 
+Before handling imbalance:
 ![image](https://github.com/user-attachments/assets/1b9f8aa8-b977-4b8a-b7ce-d7eee541fa39)
 
 <img width="509" alt="image" src="https://github.com/user-attachments/assets/f2e407f0-a43c-4594-af81-3b8cb79de04f">
 
+After handling imbalance:
 ![image](https://github.com/user-attachments/assets/ec0be6cb-c8d9-4e5e-b916-1a8bfeb8ac4b)
 
 <img width="522" alt="image" src="https://github.com/user-attachments/assets/eaf39d14-a38a-469e-b7d1-1a7145d47d94">
