@@ -26,6 +26,11 @@ The dataset includes data on 52,000 songs with features like artist name, album,
 - **Machine Learning:** Developed and evaluated logistic regression models, optimized for high accuracy and robustness in classification tasks.
 - **Class Imbalance Adjustments:** After recognizing and addressing the class imbalance in the dataset, the model's recall for classical songs improved to 0.95, ensuring that the majority of classical songs were correctly identified. However, this came at the cost of lower precision, indicating an increase in false positives.
 
+### PCA
+![image](https://github.com/user-attachments/assets/7fbdc77b-a07f-4bb7-9859-4c66f9233284)
+The dimensionality is reduced 70% after I applied PCA and decide to retain 3 principal components using Kaiser Criterion. These 3 components capture 57.36% of the variance. The PCA component loadings highlight which features are most important in each principal component, allowing for more informed decisions about feature selection or further analysis.
+
+
 ## Model Performance
 - **Single Feature Predictor:** The best single feature predictor of song popularity was **instrumentalness**, with an R² of 0.0210, indicating that it explained only 2.1% of the variance in song popularity.
 - **Combined Features Model:** A multiple regression model using all song features improved the R² to 0.0477, showing a modest enhancement, but still explaining only 4.77% of the variance in song popularity.
