@@ -1,11 +1,11 @@
 # Jerry_Huang_DS_Project_Portfolio
 
-- Decoding Hit Songs and Features: An In-Depth Analysis of the Spotify Dataset  
-- Unveiling Business Insights - A Comprehensive Data Analysis of Yelp Dataset
-- Empowering User Experience - Optimizing Product Recommendations through AB Testing and UI Enhancements
-- Revolutionizing Cash Flow Forecasts - A Paradigm Shift in Purchase and Redemption Predictions
-- News Intelligence - Unleashing the Potential of User History for Click Prediction
-- Visualizing Pokémon: A Comprehensive Exploration of Pokémon Data
+- `Decoding Hit Songs and Features` - An In-Depth Analysis of the Spotify Dataset  
+- `Unveiling Business Insights` - A Comprehensive Data Analysis of Yelp Dataset
+- `Empowering User Experience` - Optimizing Product Recommendations through AB Testing and UI Enhancements
+- `Revolutionizing Cash Flow Forecasts` - A Paradigm Shift in Purchase and Redemption Predictions
+- `News Intelligence` - Unleashing the Potential of User History for Click Prediction
+- `Visualizing Pokémon` - A Comprehensive Exploration of Pokémon Data
 
 | Project Detail | Data Link |
 |:---------------:|:---------:|
