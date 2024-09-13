@@ -1,0 +1,45 @@
+---
+title: "homework1"
+author: "our netid and name"
+date: "9/24/2021"
+output:
+  pdf_document: default
+editor_options:
+  chunk_output_type: inline
+---
+
+See the HW 1 assignment for the full instructions about formatting your homework submission. Some reminders:
+
+Label each question part(e.g. 3.a). Do not include written answers as code comments. The code used to obtain the answer for each question part should accompany the written answer.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Math problem
+
+## Latex in Rmarkdown:
+
+$$ y_{ij} = b_{ij} + \beta_{0} + \beta_{1} $$
+
+# Data Analysis
+
+## Packages
+
+```{r echo=FALSE}
+#install.packages("dplyr")
+#install.packages("magrittr")
+#install.packages("tinytex")
+library(dplyr)
+library(magrittr)
+library(readxl)
+library(tinytex)
+```
+
+## 3.a Data preparation
+
+```{r echo=TRUE}
+                                                            
+```
+
+Answer 1:

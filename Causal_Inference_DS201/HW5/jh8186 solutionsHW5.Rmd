@@ -1,0 +1,486 @@
+---
+title: "jh8186 solutionsHW5"
+author: "Jerry Huang"
+date: "2024-08-06"
+output: pdf_document
+---
+
+# Problem 1
+## Part a. Parallel trends assumption
+Parallel trends assumption states that the selection bias in time 1 is the same as the selection bias in time 0.  
+\( Y_{i1}(0) = \delta_t + u_i + \epsilon_{it}, \text{for } t = 0, 1.\)  
+
+The difference for treated group:  
+\( E[Y_{i1}(0) - Y_{i0}(0)] \mid D_i = 1\)  
+$$
+\begin{aligned}
+E[Y_{i1}(0) - Y_{i0}(0) \mid D_i = 1] &= E[(\delta_1 + u_i + \epsilon_{i1}) - (\delta_0 + u_i + \epsilon_{i0}) \mid D_i = 1] \\
+&= E[\delta_1 - \delta_0 + \epsilon_{i1} - \epsilon_{i0} \mid D_i = 1] \\
+&= \delta_1 - \delta_0 + E[\epsilon_{i1} - \epsilon_{i0} \mid D_i = 1]
+\end{aligned}
+$$
+
+
+The difference for control group:  
+\( E[Y_{i1}(0) - Y_{i0}(0)] \mid D_i = 0\)  
+$$
+\begin{aligned}
+E[Y_{i1}(0) - Y_{i0}(0) \mid D_i = 0] &= E[(\delta_1 + u_i + \epsilon_{i1}) - (\delta_0 + u_i + \epsilon_{i0}) \mid D_i = 0] \\
+&= E[\delta_1 - \delta_0 + \epsilon_{i1} - \epsilon_{i0} \mid D_i = 0] \\
+&= \delta_1 - \delta_0 + E[\epsilon_{i1} - \epsilon_{i0} \mid D_i = 0]
+\end{aligned}
+$$
+
+Given that $E[\epsilon_{i1} \mid D_i = d] = E[\epsilon_{i0} \mid D_i = d] = \eta_i(d)$ for both $d = 1$ and $d = 0$, we will have $E[\epsilon_{i1} - \epsilon_{i0} \mid D_i = 1] = \eta_i(1) - \eta_i(1) = 0$ and $E[\epsilon_{i1} - \epsilon_{i0} \mid D_i = 0] = \eta_i(0) - \eta_i(0) = 0$. The expected difference in the error terms is zero for both treated and control groups. The expected difference will be $E[\epsilon_{i1} - \epsilon_{i0} \mid D_i = d] = 0$ regardless of whether \( \eta_i(1) \) equals \( \eta_i(0) \) or not.  
+
+Thus,
+
+$$ E[Y_{i1}(0) - Y_{i0}(0) \mid D_i = 1] = E[Y_{i1}(0) - Y_{i0}(0) \mid D_i = 0] = \delta_1 - \delta_0, $$
+
+## Part b. Unbiased estimator
+We need to show that \( E[\hat{\tau}] = \frac{1}{n} \sum_{i=1}^{n} \tau_i \).
+
+**For the treated group:**
+
+$$ 
+E\left[ \frac{1}{n_t} \sum_{i=1}^{n} (Y_{i1} - Y_{i0}) D_i \right] 
+$$
+
+Substitute \( Y_{i1} \) and \( Y_{i0} \):
+
+$$
+Y_{i1} = \tau_i D_i + \delta_1 + u_i + \epsilon_{i1} 
+$$
+$$
+Y_{i0} = \delta_0 + u_i + \epsilon_{i0} 
+$$
+
+So,
+
+$$
+Y_{i1} - Y_{i0} = (\tau_i D_i + \delta_1 + u_i + \epsilon_{i1}) - (\delta_0 + u_i + \epsilon_{i0}) = \tau_i D_i + (\delta_1 - \delta_0) + (\epsilon_{i1} - \epsilon_{i0}) 
+$$
+
+Now,
+
+$$
+E\left[ \frac{1}{n_t} \sum_{i=1}^{n} (Y_{i1} - Y_{i0}) D_i \right] = E\left[ \frac{1}{n_t} \sum_{i=1}^{n} (\tau_i D_i + (\delta_1 - \delta_0) + (\epsilon_{i1} - \epsilon_{i0})) D_i \right] 
+$$
+
+Since \( E[\epsilon_{i1} - \epsilon_{i0} \mid D_i = d] = 0 \), the expectation of the error term difference is zero:
+
+$$
+E\left[ \frac{1}{n_t} \sum_{i=1}^{n} (\tau_i D_i + (\delta_1 - \delta_0)) D_i \right] 
+$$
+
+$$
+= \frac{1}{n_t} \sum_{i=1}^{n} E[\tau_i D_i D_i + (\delta_1 - \delta_0) D_i] 
+$$
+
+$$ 
+= \frac{1}{n_t} \sum_{i=1}^{n} (\tau_i E[D_i] + (\delta_1 - \delta_0) E[D_i]) 
+$$
+
+Since \( E[D_i] = \frac{n_t}{n} \):
+
+$$ 
+= \frac{1}{n_t} \sum_{i=1}^{n} (\tau_i \frac{n_t}{n} + (\delta_1 - \delta_0) \frac{n_t}{n}) 
+$$
+
+$$
+= \frac{1}{n} \sum_{i=1}^{n} \tau_i + \frac{1}{n} \sum_{i=1}^{n} (\delta_1 - \delta_0) 
+$$
+
+**For the control group**
+We will have a similar simplification process:  
+$$ 
+E\left[ \frac{1}{n_c} \sum_{i=1}^{n} (Y_{i1} - Y_{i0}) (1 - D_i) \right] 
+$$
+
+Substitute \( Y_{i1} \) and \( Y_{i0} \):
+
+$$
+Y_{i1} = \tau_i D_i + \delta_1 + u_i + \epsilon_{i1} 
+$$
+$$
+Y_{i0} = \delta_0 + u_i + \epsilon_{i0} 
+$$
+
+So,
+
+$$
+Y_{i1} - Y_{i0} = (\tau_i D_i + \delta_1 + u_i + \epsilon_{i1}) - (\delta_0 + u_i + \epsilon_{i0}) = \tau_i D_i + (\delta_1 - \delta_0) + (\epsilon_{i1} - \epsilon_{i0}) 
+$$
+
+Now,
+
+$$
+E\left[ \frac{1}{n_c} \sum_{i=1}^{n} (Y_{i1} - Y_{i0}) (1 - D_i) \right] = E\left[ \frac{1}{n_c} \sum_{i=1}^{n} (\tau_i D_i + (\delta_1 - \delta_0) + (\epsilon_{i1} - \epsilon_{i0})) (1 - D_i) \right] 
+$$
+
+Since \( E[\epsilon_{i1} - \epsilon_{i0} \mid D_i = d] = 0 \), the expectation of the error term difference is zero:
+
+$$
+E\left[ \frac{1}{n_c} \sum_{i=1}^{n} (\tau_i D_i + (\delta_1 - \delta_0)) (1 - D_i) \right] 
+$$
+
+$$
+= \frac{1}{n_c} \sum_{i=1}^{n} E[\tau_i D_i (1 - D_i) + (\delta_1 - \delta_0) (1 - D_i)] 
+$$
+Here,\( D_i(1 - D_i) = 0 \) since it is binary:  
+
+$$ 
+= \frac{1}{n_c} \sum_{i=1}^{n} (0)+ (\delta_1 - \delta_0) E[1-D_i]) 
+$$
+
+Since \( E[1 -D_i] = \frac{n_c}{n} \):
+
+$$ 
+= \frac{1}{n_c} \sum_{i=1}^{n} (0) + (\delta_1 - \delta_0) \frac{n_c}{n}) 
+$$
+
+$$
+= \frac{1}{n} \sum_{i=1}^{n} (0) + \frac{1}{n} \sum_{i=1}^{n} (\delta_1 - \delta_0) 
+$$
+
+**Combining treatment and control group**
+$$
+E[\hat\tau] = \frac{1}{n} \sum_{i=1}^{n} \tau_i + \frac{1}{n} \sum_{i=1}^{n} (\delta_1 - \delta_0) + (0) - \frac{1}{n} \sum_{i=1}^{n} (\delta_1 - \delta_0) 
+$$
+Eventually, we will have:  
+$$
+E[\hat\tau] = \frac{1}{n} \sum_{i=1}^{n} \tau_i
+$$
+
+## Part c. 
+
+$$
+E[\hat\tau_{t = 1}] = E\left[\frac{1}{n_t} \sum_{i = 1}^n  Y_{i1}D_i \right] - E\left[\frac{1}{n_c} \sum_{i = 1}^n Y_{i1}(1 - D_i) \right]
+= \frac{1}{n_t} \sum_{i = 1}^n E[ Y_{i1}D_i ] - \frac{1}{n_c} \sum_{i = 1}^n E[ Y_{i1}(1 - D_i) ]
+$$
+Substitute \( Y_{i1} \):
+$$
+= \frac{1}{n_t} \sum_{i = 1}^n E[(\tau_i D_i + \delta_1 + u_i + \epsilon_{i1})D_i ] - \frac{1}{n_c} \sum_{i = 1}^n E[ (\tau_i D_i + \delta_1 + u_i + \epsilon_{i1})(1 - D_i) ]
+$$
+Since \( D_i \) is binary and hence \( D_i (1 - D_i) = 0\), we will further reduce the equation to:  
+
+$$
+= \frac{1}{n_t} \sum_{i = 1}^n E[\tau_i D_i + \delta_1 D_i + u_i D_i+ \epsilon_{i1}D_i ] - \frac{1}{n_c} \sum_{i = 1}^n E[ \delta_1 (1 - D_i) + u_i (1 - D_i) + \epsilon_{i1}(1 - D_i) ]
+$$
+Given $E[\epsilon_{i1} \mid D_i = d]  = \eta_i(d)$, we can split the expectation:
+$$
+= \frac{1}{n_t} \sum_{i = 1}^n E[\tau_i D_i + \delta_1 D_i + u_i D_i+ \eta_i(1)D_i ] - \frac{1}{n_c} \sum_{i = 1}^n E[ \delta_1 (1 - D_i) + u_i (1 - D_i) + \eta_i(0)(1 - D_i) ]
+$$
+Simplify the expectation terms:  
+$$
+= \frac{1}{n_t} \sum_{i = 1}^n \frac{n_t}{n} (\tau_i  + \delta_1 + u_i+ \eta_i(1)) - \frac{1}{n_c} \sum_{i = 1}^n \frac{n_c}{n}(\delta_1  + u_i  + \eta_i(0))
+$$
+
+Combining and Simplifying the fractions, the result of \( E[\hat{\tau}_{t=1}] \) will be:  
+
+$$
+E[\hat{\tau}_{t=1}] = \frac{1}{n} \sum_{i=1}^{n} \tau_i + \frac{1}{n} \sum_{i=1}^{n} \eta_i(1) - \frac{1}{n} \sum_{i=1}^{n} \eta_i(0)
+$$
+Thus, the bias term is:
+
+$$ 
+\text{Bias}(\hat{\tau}_{t=1}) = E[\hat{\tau}_{t=1}] - \frac{1}{n} \sum_{i=1}^{n} \tau_i = \frac{1}{n} \sum_{i=1}^{n} (\eta_i(1) - \eta_i(0)) 
+$$
+
+# Problem 2 - Intrumental variable
+We want to show that
+
+$$
+E[\hat\tau_{Wald}^p] = E[ Y_i(1) - Y_i(0) \mid D_i(1) > D_i(0)]
+$$
+
+$$
+E[\hat\tau_{Wald}^p] = \frac{1}{p} \left(E\left[\frac{1}{n_t} \sum_{i=1}^n Y_iZ_i \right]- E\left[\frac{1}{n_c} \sum_{i=1}^n Y_i(1 - Z_i)\right] \right)
+$$
+
+For the first term:  
+$$
+E\left[\frac{1}{n_t} \sum_{i=1}^n Y_iZ_i \right] = \frac{1}{n_t} \sum_{i=1}^n E[Y_i \mid Z_i = 1] \times \mathbb{P}(Z_i = 1)
+$$
+
+Since \(\mathbb{P}(Z_i = 1) = \frac{n_t}{n}\), this simplifies to:
+
+\[
+\mathbb{E}\left[\frac{1}{n_t} \sum_{i=1}^n Y_i Z_i\right] = \frac{1}{n} \sum_{i=1}^n \mathbb{E}[Y_i \mid Z_i = 1].
+\]
+
+For the second term:
+
+\[
+\mathbb{E}\left[\frac{1}{n_c} \sum_{i=1}^n Y_i (1 - Z_i)\right] = \frac{1}{n_c} \sum_{i=1}^n \mathbb{E}[Y_i \mid Z_i = 0] \times \mathbb{P}(Z_i = 0).
+\]
+
+Since \(\mathbb{P}(Z_i = 0) = \frac{n_c}{n}\), this simplifies to:
+
+\[
+\mathbb{E}\left[\frac{1}{n_c} \sum_{i=1}^n Y_i (1 - Z_i)\right] = \frac{1}{n} \sum_{i=1}^n \mathbb{E}[Y_i \mid Z_i = 0].
+\]
+
+#### Combine the Terms
+
+The expected value of \(\hat{\tau}^{p}_{\text{Wald}}\) is therefore:
+
+\[
+\mathbb{E}[\hat{\tau}^{p}_{\text{Wald}}] = \frac{1}{p} \left(\frac{1}{n} \sum_{i=1}^n \mathbb{E}[Y_i \mid Z_i = 1] - \frac{1}{n} \sum_{i=1}^n \mathbb{E}[Y_i \mid Z_i = 0]\right).
+\]
+
+#### Relate to LATE
+
+By the definition of LATE, under monotonicity and independence assumptions, we have:
+
+\[
+\mathbb{E}[Y_i \mid Z_i = 1] - \mathbb{E}[Y_i \mid Z_i = 0] = \mathbb{E}[Y_i(1) - Y_i(0) \mid D_i(1) > D_i(0)] \times \mathbb{P}(D_i(1) > D_i(0)).
+\]
+
+Thus:
+
+\[
+\mathbb{E}[\hat{\tau}^{p}_{\text{Wald}}] = \frac{1}{p} \times p \times \mathbb{E}[Y_i(1) - Y_i(0) \mid D_i(1) > D_i(0)] = \mathbb{E}[Y_i(1) - Y_i(0) \mid D_i(1) > D_i(0)].
+\]
+
+Here we have confirmed that the estimator \(\hat{\tau}^{p}_{\text{Wald}}\) is unbiased for the Local Average Treatment Effect (LATE).
+
+# Problem 3 - 
+```{r}
+# Loading Library needed
+library(haven) # dta reader
+library(estimatr)
+library(dplyr)
+
+```
+
+```{r Simple ATE function}
+diff_in_means <- function(treated, control){
+  # Point Estimate
+  point <- mean(treated) - mean(control)
+  
+  # Standard Error
+  se <- sqrt(var(treated)/length(treated) + var(control)/length(control))
+  
+  # Asymptotic 95% CI
+  ci_95 <- c(point - qnorm(.975)*se,
+             point + qnorm(.975)*se)
+  
+  # P-value 
+  pval <- 2*pnorm(-abs(point/se))
+
+  # Return as a data frame
+  output <- data.frame(meanTreated = mean(treated), meanControl = mean(control), est = point, se = se, ci95Lower = ci_95[1], ci95Upper = ci_95[2], pvalue = pval, N= length(treated) + length(control))
+  
+  return(as_tibble(output))
+}
+```
+
+## Question 1.
+```{r ITT estimate}
+ohie <- read_dta("OHIE.dta")
+
+itt_bp_model <- lm_robust(tab2bp_hyper ~ treatment, data = ohie)
+summary(itt_bp_model)
+itt_depression_model <- lm_robust(tab2phqtot_high ~ treatment, data = ohie)
+summary(itt_depression_model)
+itt_exp_model <- lm_robust(tab4_catastrophic_exp_inp ~ treatment, data = ohie)
+summary(itt_exp_model)
+itt_care_model <- lm_robust(tab5_needmet_med_inp ~ treatment, data = ohie)
+summary(itt_care_model)
+
+```
+Interpretation:  
+The estimated intent-to-treat (ITT) effect of being selected to apply for Medicaid on **elevated blood pressure** is -0.0016. This means that, on average, being selected in the lottery to apply for Medicaid is associated with a slight decrease of 0.0016 in the probability of having elevated blood pressure. The 95% confidence interval for this estimate ranges from **-0.0146 to 0.0114**. Since this interval includes 0, it indicates that the effect is not statistically significant at the 95% confidence level. Given that the **p-value is 0.809**, which is much greater than the typical threshold of 0.05, we fail to reject the null hypothesis. This means we do not have sufficient evidence to conclude that being selected to apply for Medicaid has an effect on the probability of having elevated blood pressure.  
+
+The estimated ITT effect of being selected to apply for Medicaid on **depression** is -0.0349. This means that being selected in the lottery to apply for Medicaid is associated with a decrease of 0.0349 on average in the probability of having depression. The 95% confidence interval for this estimate ranges from **-0.051 to -0.0188**. Since it does not include 0, it indicates that the effect is statistically significant at the 95% confidence level. Also, given that **p-value is 0.0000209**, which is much smaller than the threshold of 0.05, we can reject the null hypothesis. We do have sufficient evidence to conclude that being selected to apply for Medicaid has an effect on the probability of having depression.  
+
+The estimated ITT effect of being selected to apply for Medicaid on **catastrophic medical expenditure** is -0.0153. This means that being selected in the lottery to apply for Medicaid is associated with a decrease of 0.0349 on average in the probability of having catastrophic medical expenditure. The 95% confidence interval for this estimate ranges from **-0.0229 to -0.00766**. Since it does not include 0, it indicates that the effect is statistically significant at the 95% confidence level. Also, given that **p-value is 0.0000834**, which is much smaller than the threshold of 0.05, we can reject the null hypothesis. We do have sufficient evidence to conclude that being selected to apply for Medicaid has an effect on the probability of having catastrophic medical expenditure.  
+
+The estimated ITT effect of being selected to apply for Medicaid on **whether respondents had their health care needs met** is 0.0345. This means that being selected in the lottery to apply for Medicaid is associated with an increase of 0.0345 on average in the probability of having whether respondents had their health care needs met. The 95% confidence interval for this estimate ranges from **0.0173 to 0.05166**. Since it does not include 0, it indicates that the effect is statistically significant at the 95% confidence level. Also, given that **p-value is 0.0000819**, which is much smaller than the threshold of 0.05, we can reject the null hypothesis. We do have sufficient evidence to conclude that being selected to apply for Medicaid has an effect on the probability of having whether respondents had their health care needs met. 
+
+
+## Question 2:
+```{r Medicaid enrollment on each of the four outcomes}
+
+naive_bp_model <- lm_robust(tab2bp_hyper ~ ohp_all_ever_admin , data = ohie)
+summary(naive_bp_model)
+naive_depression_model <- lm_robust(tab2phqtot_high ~ ohp_all_ever_admin, data = ohie)
+summary(naive_depression_model)
+naive_exp_model <- lm_robust(tab4_catastrophic_exp_inp ~ ohp_all_ever_admin, data = ohie)
+summary(naive_exp_model)
+naive_care_model <- lm_robust(tab5_needmet_med_inp ~ ohp_all_ever_admin, data = ohie)
+summary(naive_care_model)
+
+
+```
+Answer:  
+The result may be biased due to the following reasons:  
+- Selection Bias: Individuals who enrolled in Medicaid might differ systematically from those who did not. For example, those who chose to enroll might have different health behaviors or socioeconomic characteristics that also affect their health outcomes. This can lead to confounding, where the observed effect is partly due to these underlying differences rather than the Medicaid enrollment itself.  
+
+- Unobserved Confounders: We may have unobserved confounders that influence both treatment and outcome.  
+
+- Compliance Issues: Subjects who are assigned to treatment may not compliant to the treatment.  
+
+- Measurement Error: If there is any error in measuring Medicaid enrollment, this can also lead to biased estimates.  
+
+Interpretation:  
+The estimated effect of Medicaid enrollment on **elevated blood pressure** is -0.0181, suggesting that enrollment is associated with a 1.81 percentage point decrease in the probability of having elevated blood pressure. The 95% confidence interval ranges from **-0.0321 to -0.00401**, indicating that this effect is **statistically significant at the 95% confidence level**. The p-value is **0.0117**, which is below the 0.05 threshold, further indicating statistical significance. In contrast, the ITT effect of treatment on elevated blood pressure is -0.0016 with a confidence interval (-0.0146, 0.0114), which shows that the point estimate is smaller and there is no statistically significant. 
+
+The estimated effect of Medicaid enrollment on **depression** is 0.0493, suggesting that enrollment is associated with a 4.93 percentage point increase in the probability of having depression. The 95% confidence interval ranges from **0.0312 to 0.0674**, indicating that this effect is statistically significant at the 95% confidence level. The p-value is **0.0000000952**, which is below the 0.05 threshold, further indicating statistical significance. In contrast, the ITT effect of the treatment on depression is -0.0349 with a CI (-0.051, -0.0188). Here we can see the direction of effect changes, so there might be unobserved confounders.  
+
+The estimated effect of Medicaid enrollment on **catastrophic medical expenditure** is -0.01073, suggesting that enrollment is associated with a 1.073 percentage point decrease in the probability of having catastrophic medical expenditure. The 95% confidence interval ranges from **-0.01867 to -0.002784**, indicating that this effect is statistically significant at the 95% confidence level. The p-value is **0.008128**, which is below the 0.05 threshold, further indicating statistical significance. In contrast, the ITT effect of the treatment on catastrophic medical expenditure is -0.01527 with a CI (-0.02287, -0.007665). 
+
+The estimated effect of Medicaid enrollment on **whether respondents had their health care needs met** is 0.06127, suggesting that enrollment is associated with a 1.073 percentage point decrease in the probability of having whether respondents had their health care needs met. The 95% confidence interval ranges from **0.04268 to 0.07985**, indicating that this effect is statistically significant at the 95% confidence level. The p-value is **1.078e-10**, which is below the 0.05 threshold, further indicating statistical significance. In contrast, the ITT effect of the treatment on whether respondents had their health care needs met is 0.0345 with a CI (0.0173, 0.05166). 
+
+In conclusion, as we can see the result is quite different from ITT effect of treatment on those variables, there might be unobserved confounders between ohp_all_ever_admin and different outcomes. The ohp_all_ever_admin on blood pressure is significant, whereas the ITT effect of treatment on blood pressure is not.
+
+### Question 3:  
+```{r}
+
+compliance_selected <- sum(ohie$treatment == 1 & ohie$ohp_all_ever_admin == 1) / sum(ohie$treatment == 1)
+compliance_non_selected <- sum(ohie$treatment == 0 & ohie$ohp_all_ever_admin == 0) / sum(ohie$treatment == 0) 
+print(c(compliance_selected, compliance_non_selected))
+
+first_stage <- lm_robust(ohp_all_ever_admin ~ treatment, data = ohie)
+summary(first_stage)
+```
+Answer:  
+The compliance rate among those selected is around 38.2%, while among those not selected, it is around 85.5%. This indicates that a significant portion of the control group still managed to enroll, which might have implications for the analysis.
+
+The result shows a high F-statistic (1610). A rule of thumb is that the F-statistic should be greater than 10 for the instrument to be considered strong, and here it is much higher, suggesting that the assignment to treatment is indeed a strong instrument for actual Medicaid enrollment. The p-value is extremely small and the CI does not include 0, further indicating that the assignment to treatment is a strong instrument.
+
+### Question 4:  
+```{r}
+
+# Second Stage result
+iv_model_bp <- iv_robust(tab2bp_hyper ~ ohp_all_ever_admin|treatment, data = ohie)
+summary(iv_model_bp)
+iv_model_dp <- iv_robust(tab2phqtot_high ~ ohp_all_ever_admin|treatment, data = ohie)
+summary(iv_model_dp)
+iv_model_exp <- iv_robust(tab4_catastrophic_exp_inp ~ ohp_all_ever_admin|treatment, data = ohie)
+summary(iv_model_exp)
+iv_model_need <- iv_robust(tab5_needmet_med_inp ~ ohp_all_ever_admin|treatment, data = ohie)
+summary(iv_model_need)
+
+```
+Answer:  
+**Elevated Blood Pressure** 
+- LATE: -0.0063  
+- Naive estimate: -0.0181  
+The 95% Confidence interval is (-0.0574, 0.0448), which indicates that the result is not statistically significant since this interval includes 0. The p-value is 0.809, which is higher than the 0.05 threshold, further indicating it is no statistical significance. The LATE for the effect of Medicaid enrollment on elevated blood pressure is -0.0063. This means that for the subgroup of individuals who enrolled in Medicaid because they were selected in the lottery (the compliers), there is an estimated decrease of 0.63 percentage points in the probability of having elevated blood pressure. The Naive estimate does not account for potential biases due to selection effects and endogeneity, which might explain why it differs from the LATE.  
+
+**Depression**  
+- LATE: -0.0181  
+- Naive estimate: 0.0493
+The 95% Confidence interval is (-0.202, -0.0732), which indicates that the result is statistically significant since this interval does not include 0. The p-value is 0.0000284, which is below the 0.05 threshold, further indicating statistical significance. The LATE for the effect of Medicaid enrollment on depression is -0.0181. This means that for the subgroup of individuals who enrolled in Medicaid because they were selected in the lottery (the compliers), there is an estimated decrease of 1.81 percentage points in the probability of having depression. The Naive estimate provides a different result (0.0493), which means that there is an estimated increase of 4.93 percentage points in the probability of having depression for all individuals enrolling in Medicaid. The fact that the naive estimate suggests an effect in the opposite direction compared to the LATE indicates that the bias is indeed strong. The result is significant here but is not in 3.2.  
+
+
+**Catastrophic Medical Expenditure**  
+- LATE: -0.0604
+- Naive estimate: -0.0107
+The 95% Confidence interval is (-0.0906, -0.0301), which indicates that the result is statistically significant since this interval does not include 0. The p-value is 0.0000916, which is below the 0.05 threshold, further indicating statistical significance. The LATE for the effect of Medicaid enrollment on Catastrophic Medical Expenditure is -0.0604. This means that for the subgroup of individuals who enrolled in Medicaid because they were selected in the lottery (the compliers), there is an estimated decrease of 6.04 percentage points in the probability of having Catastrophic Medical Expenditure. The Naive estimate provides a different result (-0.0107), which means that there is an estimated decrease of -1.07 percentage points in the probability of having Catastrophic Medical Expenditure for all individuals enrolling in Medicaid.
+
+
+**Health care needs**
+- LATE: 0.135
+- Naive estimate: 0.0613
+The 95% Confidence interval is (0.0000835, 0.068), which indicates that the result is statistically significant since this interval does not include 0. The p-value is 0.0000835, which is below the 0.05 threshold, further indicating statistical significance. The LATE for the effect of Medicaid enrollment on Catastrophic Medical Expenditure is 0.135. This means that for the subgroup of individuals who enrolled in Medicaid because they were selected in the lottery (the compliers), there is an estimated increase of 13.5 percentage points in the probability of having whether respondents had their health care needs met. The Naive estimate provides a smaller result (0.0613), which means that there is only an estimated increase of 6.13 percentage points in the probability of having having whether respondents had their health care needs met for all individuals enrolling in Medicaid.
+
+
+### Problem 5.  
+Answer:  
+Randomization: Instrument is independent of both sets of potential outcomes (potential outcomes for the treatment and potential outcomes for the outcome).  
+Exclusion restriction: Random assignment affects the outcomes only through Medicaid enrollment.  
+First-stage relationship: The instrument must at least have some weak effect on treatment.  
+Monotonicity: There are no individuals who would enroll in Medicaid only if they were not assigned to the treatment group.  
+Homogeneous Treatment Effect: The treatment effect of Medicaid enrollment is the same for all individuals in the sample.  
+
+# Problem 4 - 
+## Question 1:  
+```{r}
+bases <- read_dta("bases_replication_final.dta")
+number_control <- sum(bases$bases6 == 0)
+print(number_control)
+
+check_bases <- bases %>%
+  group_by(municipality) %>%
+  summarise(sd_bases = sd(bases6, na.rm = TRUE)) %>%
+  summarise(change_over_time = any(sd_bases > 0))
+
+check_military <- bases %>%
+  group_by(municipality) %>%
+  summarise(sd_military = sd(lrmilnar_col, na.rm = TRUE)) %>%
+  summarise(change_over_time = any(sd_military > 0))
+
+print(check_bases)
+print(check_military)
+```
+
+Answer:  
+There are 16272 units in the 'control' group. Bases do not change over time but the logged military aid variable does change across units for a given year. The author is assuming that while the presence of military bases is a fixed characteristic (time-invariant), the amount of U.S. military aid distributed to municipalities can vary both over time and across municipalities. This variation in aid might depend on factors like the severity of conflict, strategic importance, or other unobserved characteristics of the municipalities.
+
+### Question 2.  
+
+In the two-way fixed effects model used to estimate the effect of U.S. military and narcotics aid on paramilitary attacks, the authors make several key assumptions to identify the treatment effect:  
+
+1. Parallel Trends Assumption:  
+Explanation: The parallel trends assumption assumes that in the absence of the treatment (U.S. military aid), the trends in paramilitary attacks would have been the same across municipalities with and without military bases. If this assumption holds, the difference in trends between treated and control municipalities after the treatment can be attributed to the treatment effect (i.e., the interaction of military aid with the presence of a base). Violations of this assumption could lead to biased estimates of the treatment effect.
+2. No Time-Varying Confounders:
+Explanation: The model assumes that there are no unobserved confounders that vary over time and are correlated with both the treatment (military aid) and the outcome (paramilitary attacks). This means that any factors influencing the level of paramilitary attacks that change over time must be either controlled for in the model or assumed to be unrelated to the treatment. If there are unobserved, time-varying confounders (e.g., changes in local governance or economic conditions) that influence both the allocation of military aid and paramilitary violence, the treatment effect estimate may be biased.
+3. Homogeneity of Treatment Effect:
+Explanation: The two-way fixed effects model assumes that the treatment effect (the impact of military aid on paramilitary attacks) is homogeneous across all municipalities and time periods. This means the model assumes that the effect of the aid does not vary between different municipalities or over different years. If the treatment effect varies across municipalities (e.g., if aid is more effective in some areas than others), the model’s estimate of the average treatment effect may not accurately represent the true impact of military aid.
+4. Exogeneity of Treatment:
+Explanation: The model assumes that the treatment (military aid, as interacted with the presence of a military base) is exogenous. This means that the allocation of military aid is not influenced by potential outcomes (i.e., it is not driven by the current or expected levels of paramilitary violence). If military aid is allocated based on expected levels of violence (e.g., more aid is sent to areas already experiencing high violence), this could lead to endogeneity, resulting in biased estimates of the treatment effect.
+
+### Question 3.
+```{r}
+# install.packages("plm")
+library(plm)
+library(lmtest)  # For coeftest function
+library(sandwich)  # For clustered standard errors
+
+bases_4 <- bases %>%
+  select(paratt, year, municipality, bases6xlrmilnar_col, lnnewpop, lrmilnar_col)
+
+data <- pdata.frame(bases_4, index = c('municipality', 'year'))
+
+did_model <- plm(paratt ~ bases6xlrmilnar_col + lnnewpop , 
+                 data = data, 
+                 model = 'within', 
+                 effect = 'twoways')
+summary(did_model)
+
+# Calculate clustered standard errors at the municipality level
+clustered_se <- vcovHC(did_model, type = "HC1", cluster = "group")
+
+# Display the summary with clustered standard errors
+coeftest(did_model, vcov = clustered_se)
+
+coef_value <- 0.150312  
+se_value <- 0.060090
+
+# Calculate the confidence intervals
+CI_upper <- coef_value + 1.96 * se_value
+CI_lower <- coef_value - 1.96 * se_value
+
+# Print the confidence intervals
+print(paste("95% CI: [", CI_lower, ", ", CI_upper, "]", sep = ""))
+
+```
+
+The confidence interval for the coefficient is [0.11641772, 0.18420628]. The positive and statistically significant coefficient for bases6xlrmilnar_col (0.150312) suggests that the interaction between U.S. military and narcotics aid (lrmilnar_col) and the presence of a military base (bases6) has a significant positive effect on the number of paramilitary attacks. Specifically, for each one-unit increase in the interaction term, the number of paramilitary attacks increases by approximately 0.15, holding other factors constant.
+
+The results from this two-way fixed effects model indicate that the interaction of U.S. military and narcotics aid with the presence of a military base is associated with a significant increase in paramilitary attacks in Colombian municipalities. Additionally, municipalities with larger populations also experience more paramilitary attacks. These findings suggest that U.S. military aid, when coupled with military bases, may have unintended consequences, potentially exacerbating violence in areas with military presence.
+
+
+
+# ```{r}
+# # Run the two-way fixed effects model
+# result_model <- lm_robust(paratt ~ bases6xlrmilnar_col + lnnewpop + factor(municipality) + factor(year),
+#                    data = bases, clusters = municipality)
+# summary(resutl_model)
+# ```
+
+
+

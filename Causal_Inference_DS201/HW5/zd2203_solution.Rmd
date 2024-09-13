@@ -1,0 +1,342 @@
+---
+title: "Untitled"
+output:
+  pdf_document: default
+  html_document: default
+date: "2024-08-01"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+To show that the parallel trends assumption is satisfied, we need to prove that:
+\[
+\mathbb{E}[Y_{i1}(0) - Y_{i0}(0) \mid D_i = 1] = \mathbb{E}[Y_{i1}(0) - Y_{i0}(0) \mid D_i = 0].
+\]
+
+The potential outcomes under control are given by:
+\[
+Y_{i0}(0) = \delta_0 + u_i + \epsilon_{i0},
+\]
+\[
+Y_{i1}(0) = \delta_1 + u_i + \epsilon_{i1}.
+\]
+
+For a given unit \( i \), the difference in potential outcomes under control between \( t = 1 \) and \( t = 0 \) is:
+\[
+Y_{i1}(0) - Y_{i0}(0) = (\delta_1 + u_i + \epsilon_{i1}) - (\delta_0 + u_i + \epsilon_{i0}),
+\]
+\[
+Y_{i1}(0) - Y_{i0}(0) = \delta_1 - \delta_0 + (\epsilon_{i1} - \epsilon_{i0}).
+\]
+
+
+Next, we take the expectation of this difference conditional on \( D_i \).
+
+For \( D_i = 1 \):
+\[
+\mathbb{E}[Y_{i1}(0) - Y_{i0}(0) \mid D_i = 1] = \mathbb{E}[\delta_1 - \delta_0 + (\epsilon_{i1} - \epsilon_{i0}) \mid D_i = 1].
+\]
+
+Given \( \mathbb{E}[\epsilon_{i0} \mid D_i = 1] = \eta_i(1) \) and \( \mathbb{E}[\epsilon_{i1} \mid D_i = 1] = \eta_i(1) \), we have:
+\[
+\mathbb{E}[\epsilon_{i1} - \epsilon_{i0} \mid D_i = 1] = \mathbb{E}[\epsilon_{i1} \mid D_i = 1] - \mathbb{E}[\epsilon_{i0} \mid D_i = 1] = \eta_i(1) - \eta_i(1) = 0.
+\]
+
+Thus,
+\[
+\mathbb{E}[Y_{i1}(0) - Y_{i0}(0) \mid D_i = 1] = \delta_1 - \delta_0.
+\]
+
+For \( D_i = 0 \):
+\[
+\mathbb{E}[Y_{i1}(0) - Y_{i0}(0) \mid D_i = 0] = \mathbb{E}[\delta_1 - \delta_0 + (\epsilon_{i1} - \epsilon_{i0}) \mid D_i = 0].
+\]
+
+Given \( \mathbb{E}[\epsilon_{i0} \mid D_i = 0] = \eta_i(0) \) and \( \mathbb{E}[\epsilon_{i1} \mid D_i = 0] = \eta_i(0) \), we have:
+\[
+\mathbb{E}[\epsilon_{i1} - \epsilon_{i0} \mid D_i = 0] = \mathbb{E}[\epsilon_{i1} \mid D_i = 0] - \mathbb{E}[\epsilon_{i0} \mid D_i = 0] = \eta_i(0) - \eta_i(0) = 0.
+\]
+
+Thus,
+\[
+\mathbb{E}[Y_{i1}(0) - Y_{i0}(0) \mid D_i = 0] = \delta_1 - \delta_0.
+\]
+##1.2
+First, let's break down the expectation of the estimator:
+\[
+\mathbb{E}[\hat{\tau}] = \frac{1}{n_t} \mathbb{E} \left[ \sum_{i=1}^{n} (Y_{i1} - Y_{i0}) D_i \right] - \frac{1}{n_c} \mathbb{E} \left[ \sum_{i=1}^{n} (Y_{i1} - Y_{i0}) (1 - D_i) \right]
+\]
+
+\[
+= \frac{1}{n_t} \sum \mathbb{E}[\mathbb{E}[(\tau_i D_i + \delta_1 - \delta_0 + \epsilon_{i1} - \epsilon_{i0}) D_i]|D_i] - \frac{1}{n_c} \sum \mathbb{E}[\mathbb{E}[(\tau_i D_i + \delta_1 - \delta_0 + \epsilon_{i1} - \epsilon_{i0})(1 - D_i)]|D_i]
+\]
+
+\[
+= \frac{1}{n_t} \sum \mathbb{E}[\tau_i + \delta_1 - \delta_0 + \epsilon_{i1} - \epsilon_{i0}] \Pr(D_i = 1) - \frac{1}{n_c} \sum \mathbb{E}[\delta_1 - \delta_0 + \epsilon_{i1} - \epsilon_{i0}] \Pr(D_i = 0)
+\]
+
+\[
+= \frac{1}{n_t} \sum \mathbb{E}[\tau_i + \delta_1 - \delta_0 + \epsilon_{i1} - \epsilon_{i0}] \frac{n_t}{n} - \frac{1}{n_c} \sum \mathbb{E}[\delta_1 - \delta_0 + \epsilon_{i1} - \epsilon_{i0}] \frac{n_c}{n}
+\]
+
+\[
+= \frac{1}{n} \sum \mathbb{E}[\tau_i + \delta_1 - \delta_0 + \epsilon_{i1} - \epsilon_{i0}] - \frac{1}{n} \sum \mathbb{E}[\delta_1 - \delta_0 + \epsilon_{i1} - \epsilon_{i0}]
+\]
+
+\[
+= \frac{1}{n} \sum \tau_i + \delta_1 - \delta_0 - \frac{1}{n} \sum \delta_1 - \delta_0 = \frac{1}{n} \sum \tau_i
+\]
+
+So we’ve shown that the expectation of the estimator equals the ATE:
+\[
+\mathbb{E}[\hat{\tau}] = \tau
+\]
+and thus the estimator is unbiased for the ATE in this setting.
+
+##1.3
+\[
+\mathbb{E}[\hat{\tau}_t=1] = \frac{1}{n_t} \sum_{i=1}^{n} \mathbb{E}[Y_{i1}D_i] - \frac{1}{n_c} \sum_{i=1}^{n} \mathbb{E}[Y_{i1}(1-D_i)]
+\]
+
+\[
+= \frac{1}{n_t} \sum_{i=1}^{n} \mathbb{E}[\mathbb{E}[Y_{i1}D_i|D_i]] - \frac{1}{n_c} \sum_{i=1}^{n} \mathbb{E}[\mathbb{E}[Y_{i1}(1-D_i)|D_i]]
+\]
+
+\[
+= \frac{1}{n_t} \sum_{i=1}^{n} \mathbb{E}[Y_{i1}D_i|D_i=1] \cdot P(D_i=1) - \frac{1}{n_c} \sum_{i=1}^{n} \mathbb{E}[Y_{i1}(1-D_i)|D_i=0] \cdot P(D_i=0)
+\]
+
+\[
+= \frac{1}{n_t} \sum_{i=1}^{n} \mathbb{E}[Y_{i1}D_i|D_i=1] \cdot \frac{n_t}{n} - \frac{1}{n_c} \sum_{i=1}^{n} \mathbb{E}[Y_{i1}(1-D_i)|D_i=0] \cdot \frac{n_c}{n}
+\]
+
+\[
+= \frac{1}{n} \left(\sum_{i=1}^{n} \mathbb{E}[Y_{i1}D_i|D_i=1] - \mathbb{E}[Y_{i1}(1-D_i)|D_i=0]\right)
+\]
+
+\[
+= \frac{1}{n} \left(\sum_{i=1}^{n} \mathbb{E}[\tau_i] + \mu_i(1) - \mu_i(0)\right)
+\]
+
+\[
+Bias = \frac{1}{n} \left(\sum_{i=1}^{n} \mu_i(1) - \mu_i(0)\right)
+\]
+
+
+##2.1
+
+\[
+\mathbb{E}[\hat{\tau}_{Wald}] = \mathbb{E} \left[ \frac{1}{p} \left( \frac{1}{n_t} \sum_{i=1}^{n} Y_i Z_i - \frac{1}{n_c} \sum_{i=1}^{n} Y_i (1 - Z_i) \right) \right]
+\]
+
+\[
+= \frac{1}{p} \left( \frac{1}{n_t} \sum_{i=1}^{n} \mathbb{E}[Y_i Z_i] - \frac{n_c}{n} \sum_{i=1}^{n} \mathbb{E}[Y_i(1-Z_i)] \right)
+\]
+
+\[
+= \frac{1}{p} \left( \frac{1}{n_t} \sum_{i=1}^{n} \mathbb{E}[Y_i | Z_i = 1] P(Z_i = 1) - \frac{1}{n_c} \sum_{i=1}^{n} \mathbb{E}[Y_i | Z_i = 0] P(Z_i = 0) \right)
+\]
+
+\[
+= \frac{1}{p} \left( \frac{1}{n_t} \sum_{i=1}^{n} \mathbb{E}[Y_i | Z_i = 1] \frac{n_t}{n} - \frac{1}{n_c} \sum_{i=1}^{n} \mathbb{E}[Y_i | Z_i = 0] \frac{n_c}{n} \right)
+\]
+
+\[
+= \frac{1}{np} \left( \sum_{i=1}^{n} \mathbb{E}[Y_i | Z_i = 1] - \sum_{i=1}^{n} \mathbb{E}[Y_i | Z_i = 0] \right)
+\]
+
+\[
+= \frac{1}{p} \left( \mathbb{E}[\tau_{ITT}] \right) 
+\]
+
+\[
+= \frac{\tau_{ITT}}{p} = \text{LATE}
+\]
+##3
+```{r}
+library(haven)
+library(estimatr)
+ohie <- read_dta("OHIE.dta")
+model_bp <- lm_robust(tab2bp_hyper ~ treatment, data = ohie)
+summary(model_bp)
+```
+
+```{r}
+model_depression <- lm_robust(tab2phqtot_high ~ treatment, data = ohie)
+summary(model_depression)
+```
+
+```{r}
+model_needmet <- lm_robust(tab5_needmet_med_inp ~ treatment, data = ohie)
+summary(model_needmet)
+```
+
+```{r}
+model_catastrophic <- lm_robust(tab4_catastrophic_exp_inp ~ treatment, data = ohie)
+summary(model_catastrophic)
+```
+Treatment can decrease blood pressure level (ITT of -0.0016). However this is not significant since CI includes 0.
+Treatment can decrease depression, with an ITT of -0.035, and a p-value less than 0.05, CI shows significance.
+Treatment can decrease catastrophic medical expenditure, with an ITT of -0.01527, and CI shows significance.
+Treatment can also increase need met, indicating that more people think that they get treated evertime when they need it, illustrated by ITT of 0.034 and a CI showing significance.
+
+##3.2
+```{r}
+model_bp_2 <- lm_robust(tab2bp_hyper ~ ohp_all_ever_admin, data = ohie)
+model_depression_2 <- lm_robust(tab2phqtot_high ~ ohp_all_ever_admin, data = ohie)
+model_needmet_2 <- lm_robust(tab5_needmet_med_inp ~ ohp_all_ever_admin, data = ohie)
+model_catastrophic_2 <- lm_robust(tab4_catastrophic_exp_inp ~ ohp_all_ever_admin, data = ohie)
+summary(model_bp_2)
+```
+```{r}
+summary(model_depression_2)
+```
+
+```{r}
+summary(model_needmet_2)
+```
+
+```{r}
+summary(model_catastrophic_2)
+```
+
+By looking at CIs, everything now are significant. With a decrease in blood pressure (-0.018), decrease in catastrophic medical expenditure (-0.011), and a positive impact in need met (0.06) as expected. However, now the depression level increased in this naive regression (0.049)
+There might be unobserved confounders between ohp_all_ever_admin and different outcomes. 
+##3.3
+```{r}
+compliance_selected <- sum(ohie$treatment == 1 & ohie$ohp_all_ever_admin == 1) / sum(ohie$treatment == 1)
+compliance_non_selected <- sum(ohie$treatment == 0 & ohie$ohp_all_ever_admin == 0) / sum(ohie$treatment == 0)
+print(c(compliance_selected,compliance_non_selected))
+
+```
+
+```{r}
+IV_effect <- lm_robust(ohp_all_ever_admin ~ treatment, data = ohie)
+summary(IV_effect)
+```
+
+The regression shows high F statistic, extremely low p-value, with a CI showing significance, indicating a strong explainability on prediction of compliance rate.
+##3.4
+```{r}
+bp_iv <- iv_robust(tab2bp_hyper ~ ohp_all_ever_admin | treatment, data = ohie)
+summary(bp_iv)
+```
+
+```{r}
+depression_iv <- iv_robust(tab2phqtot_high ~ ohp_all_ever_admin|treatment, data = ohie)
+summary(depression_iv)
+```
+
+```{r}
+cata_iv <- iv_robust(tab4_catastrophic_exp_inp ~ ohp_all_ever_admin | treatment, data = ohie)
+summary(cata_iv)
+```
+
+```{r}
+needmet_iv <- iv_robust(tab5_needmet_med_inp ~ ohp_all_ever_admin | treatment, data = ohie)
+summary(needmet_iv)
+```
+
+Blood pressure is still not significant. while the result in 3.2 shows significance, IV might mitigated some biases.
+Decrease in depression is larger in IV estimation than previous linear regression in 3.1, while in 3.2, naive regression even shows positive impact on depression. For IV estimation, it shows significance according to CI. This suggests that IV dealed with some biases and it is more accurate.
+Decrease in catastrophic expenditure is larger in magnitude than previous linear regressions, also showing significance according to CI.
+Again, there is a larger effect on increasing need met metric than previous estimations and this effect is still statistically significant. This again illustrates the capability of IV estimation in figuring out the true relationship.
+
+##3.5
+Exclusion Restriction: The instrument used must affect the outcomes only through Medicaid enrollment and not through any other pathway. This means that the instrument should not have a direct effect on the outcomes, other than through its effect on the treatment variable (Medicaid enrollment).
+Monotonicity (No Defiers): This assumption implies that the instrument affects all individuals in the same direction
+Homogeneous Treatment Effect: This assumption implies that the treatment effect of Medicaid enrollment is the same for all individuals in the sample
+Independence (Random Assignment of the Instrument): The instrument must be as good as randomly assigned, meaning that it is not correlated with any unobserved confounders that could also affect the outcome.
+
+##4.1
+```{r}
+library(haven)
+library(dplyr)
+data <- read_dta("bases_replication_final.dta")
+```
+
+```{r}
+sum(data$bases6==0)
+```
+```{r}
+time_variation <- data %>%
+  group_by(municipality) %>%
+  summarize(changes_over_time = var(bases6,na.rm = TRUE))
+print(time_variation)
+```
+
+```{r}
+time_variation <- data %>%
+  group_by(municipality) %>%
+  summarize(aid_change = var(lrmilnar_col, na.rm = TRUE))
+print(time_variation)
+```
+It seems like the number of bases is constant while military aid is not.
+Author may assume that in each muni, military aid is not uniform, ie different military aid each year in different muni. ALso, author might assume that the military aid in each muni are changing in different years. And it seems like author assumes same change of aid in different munis, ie, same variance of aid in all munis.
+
+##4.2
+No Time-Varying Confounders (Conditional Independence):The key assumption is that after controlling for both unit and time fixed effects, any remaining variation in the treatment variable Dit is exogenous. This means that there are no unobserved confounders that vary over time and across units. And the assignment of military aid is as good as random.
+Parallel Trends Assumption: No need to explain
+Consistency and Linearity: the effect is assumed to be linear.
+Error term is assumed to be uncorrelated with treatment.
+
+##4.3
+```{r}
+# Load necessary libraries
+library(foreign)
+library(plm)
+library(lmtest)
+
+
+# Convert data to panel data format
+pdata <- pdata.frame(data, index = c("municipality", "year"))
+colnames(pdata)
+# Run the two-way fixed effects regression
+model <- plm(paratt ~ lrmilnar_col + bases6xlrmilnar_col + lnnewpop, 
+             data = pdata, 
+             model = "within",
+             effect = "twoways")
+
+# Summary of the model
+summary(model)
+```
+
+```{r}
+# Clustered standard errors
+coeftest(model, vcovHC(model, type = "HC1", cluster = "group"))
+```
+
+```{r}
+# Coefficients and standard errors from your model output
+coef_bases6xlrmilnar_col <- 0.150312
+se_bases6xlrmilnar_col <- 0.060090
+
+coef_lnnewpop <- 0.117848
+se_lnnewpop <- 0.045237
+
+# Calculate 95% confidence intervals
+ci_bases6xlrmilnar_col <- c(
+  coef_bases6xlrmilnar_col - 1.96 * se_bases6xlrmilnar_col,
+  coef_bases6xlrmilnar_col + 1.96 * se_bases6xlrmilnar_col
+)
+
+ci_lnnewpop <- c(
+  coef_lnnewpop - 1.96 * se_lnnewpop,
+  coef_lnnewpop + 1.96 * se_lnnewpop
+)
+
+# Print the confidence intervals
+cat("95% CI for bases6xlrmilnar_col: [", ci_bases6xlrmilnar_col[1], ", ", ci_bases6xlrmilnar_col[2], "]\n")
+cat("95% CI for lnnewpop: [", ci_lnnewpop[1], ", ", ci_lnnewpop[2], "]\n")
+
+```
+The interaction term between U.S. military aid and the presence of a base (bases6xlrmilnar_col) has a positive and statistically significant effect on the number of paramilitary attacks. This suggests that in municipalities with a U.S. military base, increased aid is associated with more paramilitary violence.
+The population size (lnnewpop) also has a positive and statistically significant effect, indicating that larger populations are associated with more paramilitary attacks.
+
+
+
+
+
+
