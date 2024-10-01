@@ -3,7 +3,7 @@
 ## Overview
 This homework, part of Causal Inference at New York University, covers four key topics: social experiments, election fraud detection, voter turnout analysis, and stratified randomization. Each problem addresses a unique real-world scenario and applies different techniques like ANOVA, Monte Carlo Simulations, Randomization Inference, and Neyman Estimation.
 
-## `Part 1`: Changing Minds on Gay Marriage (Problem 1)
+## Part 1: Changing Minds on Gay Marriage (Problem 1)
 This section analyzes data from a social experiment designed to test the contact hypothesis, which contends that interactions between different groups reduce out-group hostility. The experiment studied the impact of canvassing by both gay and straight canvassers on public support for same-sex marriage.
 
 ### Methods and Key Techniques:
