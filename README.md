@@ -1,5 +1,6 @@
 # Jerry_Huang_DS_Project_Portfolio
 
+- `Licenses for Progress` - Evaluating the Impact of Compulsory Licensing on U.S. Innovation
 - `Decoding Hit Songs and Features` - An In-Depth Analysis of the Spotify Dataset  
 - `Unveiling Business Insights` - A Comprehensive Data Analysis of Yelp Dataset
 - `Empowering User Experience` - Optimizing Product Recommendations through AB Testing and UI Enhancements
@@ -9,6 +10,7 @@
 
 | Project Detail | Data Link |
 |:---------------:|:---------:|
+| [Assessing the Impact of Compulsory Licensing on U.S. Innovation](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/Causal_Inference_DS201/Final) | [Link]() |
 | [Spotify Popularity Analysis](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/Spotify) | [Link](https://drive.google.com/drive/folders/1fTegCMoLUX1kmEcOu6uF1shaHXY8ZbeZ) |
 | [Yelp Data Analysis](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/Yelp_Data_Analysis) | [Link](https://drive.google.com/drive/folders/1EFwoFE55A2rtDRsnGJCiDG58cen3rQFZ) |
 | [AB Testing](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/ABtest) | [Link](https://drive.google.com/drive/folders/1PFIw57D5BoIq7pJnYgKpPL_8nnw4gbOF) |
