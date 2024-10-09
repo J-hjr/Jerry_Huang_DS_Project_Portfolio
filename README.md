@@ -13,7 +13,6 @@
 | [The Impact of Compulsory Licensing on U.S. Innovation](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/Causal_Inference_DS201/Final) | [Link]() |
 | [Spotify Popularity Analysis](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/Spotify) | [Link](https://drive.google.com/drive/folders/1fTegCMoLUX1kmEcOu6uF1shaHXY8ZbeZ) |
 | [Yelp Data Analysis](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/Yelp_Data_Analysis) | [Link](https://drive.google.com/drive/folders/1EFwoFE55A2rtDRsnGJCiDG58cen3rQFZ) |
-| [AB Testing](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/ABtest) | [Link](https://drive.google.com/drive/folders/1PFIw57D5BoIq7pJnYgKpPL_8nnw4gbOF) |
 | [Cashflow Forecasting](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/CashFlow_Forecasting) | [Link](https://drive.google.com/drive/folders/1DdCTbNL8z8ID8PJxwpm5xj2LjZ5WzVx2) |
 | [News RecSys](https://github.com/datoujinggzj/DS_Project_Portfolio/tree/main/recommender_system) | [Link](https://drive.google.com/drive/folders/1QgIzI9cXdcpChdM7z6sXhQClL0z0b8sz) | 
 | [Pokémon Data Visualization](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/Pokemon_Data_Visualization) | [Link](https://drive.google.com/drive/folders/1ZaPSj-JpwN0hbEd5a8KR73miCqsIS-2M) |
