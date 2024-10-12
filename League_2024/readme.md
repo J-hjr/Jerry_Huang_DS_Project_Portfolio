@@ -1,6 +1,8 @@
 
 # League of Legends Champions 2024
 
+![image](https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/9eb028de391e65072d06e77f06d0955f66b9fa2c-736x316.png?auto=format&fit=fill&q=80&w=625)
+
 ## Project Objective
 
 This project aims to analyze and explore various attributes of League of Legends champions using a dataset from Kaggle. The analysis is designed to help players, analysts, and developers gain insights into champion characteristics, roles in gameplay, and their overall mechanics. The data analysis provides a better understanding of key factors such as champion difficulty, resource types, and correlations between various in-game stats like Blue Essence and Base HP.
