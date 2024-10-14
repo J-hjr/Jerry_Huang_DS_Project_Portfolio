@@ -90,6 +90,8 @@ We can analyze market competition and trends, including information such as the 
 
 ![image](https://github.com/user-attachments/assets/4b087473-0295-4bb3-815e-3b941a68d559)
 
+![image](https://github.com/user-attachments/assets/f596a457-4412-4902-b053-fda762b58120)
+
 It involves using natural language processing techniques to analyze the opinions and emotions expressed in user reviews and ratings. By doing so, we can identify patterns and trends in user sentiment towards different businesses and their products or services, and help businesses improve their products or services to meet customer expectations.
 
 For example, we can use sentiment analysis to identify common issues or complaints mentioned in user reviews, such as long wait times, poor customer service, or low quality food. Businesses can then use this information to address these issues and improve their overall customer satisfaction. The platform itself can also benefit from sentiment analysis by identifying trends in user satisfaction and dissatisfaction across different categories of businesses, and use this information to improve the platform's features and services.
