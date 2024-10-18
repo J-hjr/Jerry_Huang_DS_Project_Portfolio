@@ -137,20 +137,20 @@ Data analysis is only valuable if the results are interpreted correctly and comm
 
 ### Data analysis skills
 
-In the Yelp data analysis project, you need to clean, transform, aggregate and analyze large-scale and complex datasets, such as data type conversion, missing value handling, outlier detection and removal, data standardization, and group aggregation. At the same time, you also need to use different modeling and analysis methods, such as regression analysis, classification analysis, clustering analysis, and time-series analysis, to interpret the data and extract valuable information based on the analysis purpose.
+In the Yelp data analysis project, I learn to clean, transform, aggregate and analyze large-scale and complex datasets, such as data type conversion, missing value handling, outlier detection and removal, data standardization, and group aggregation. At the same time, I also learned how to use different modeling and analysis methods, such as regression analysis, classification analysis, clustering analysis, and time-series analysis, to interpret the data and extract valuable information based on the analysis purpose.
 
 ### Business analysis skills
 
-In the Yelp data analysis project, you need to analyze the data from different perspectives, such as the platform, users, and merchants, to understand the operational status of the Yelp platform. For example, you can analyze user reviews for different types of restaurants to understand the popularity of different types of restaurants on Yelp; you can also analyze merchant feedback to understand their satisfaction with Yelp's services and use their feedback to improve the platform.
+In the Yelp data analysis project, I need to analyze the data from different perspectives, such as the platform, users, and merchants, to understand the operational status of the Yelp platform. For example, I can analyze user reviews for different types of restaurants to understand the popularity of different types of restaurants on Yelp; I can also analyze merchant feedback to understand their satisfaction with Yelp's services and use their feedback to improve the platform.
 
 ### Programming skills
 
-In the Yelp data analysis project, you need to use programming languages to process and analyze data. For example, you can use Python to write data cleaning and analysis scripts, use SQL to perform data querying and aggregation analysis, and use R for statistical analysis and data visualization.
+In the Yelp data analysis project, I need to use programming languages to process and analyze data. For example, I used Python to write data cleaning and analysis scripts and used SQL to perform data querying and aggregation analysis.
 
 ### Visualization skills
 
-In the Yelp data analysis project, you need to use visualization tools to display the analysis results to non-technical stakeholders. For example, you can use tools such as Tableau, Power BI to perform visualization analysis, and create charts such as bar charts, scatterplots, line charts, and heatmaps to show the results of Yelp data analysis.
+In the Yelp data analysis project, I learn to use visualization tools to display the analysis results to non-technical stakeholders. For example, I used tools such as Tableau, Power BI to perform visualization analysis, and create charts such as bar charts, scatterplots, line charts, and heatmaps to show the results of Yelp data analysis.
 
 ### Teamwork skills
 
-In the Yelp data analysis project, you need to collaborate with team members to develop analysis plans and interpret the analysis results. For example, you can work with team members to discuss the analysis purpose and research questions, design analysis plans and experiment workflows, and collaborate on data cleaning, analysis, and visualization tasks.
+In the Yelp data analysis project, I also learn how I can collaborate with team members to develop analysis plans and interpret the analysis results. For example, I can work with team members to discuss the analysis purpose and research questions, design analysis plans and experiment workflows, and collaborate on data cleaning, analysis, and visualization tasks. Through this project, I also had a general sense that how I can break down a huge project into several minute steps, and for each of them I learned how to solve problems individually.
