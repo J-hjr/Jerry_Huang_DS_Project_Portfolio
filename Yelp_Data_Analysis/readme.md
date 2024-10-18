@@ -1,6 +1,4 @@
 # Unveiling Business Insights - A Comprehensive Data Analysis of Yelp Dataset
-
-未完善！！！需要改！！！
 <div STYLE="page-break-after: always;"></div>
 
 ##  What is Yelp?
