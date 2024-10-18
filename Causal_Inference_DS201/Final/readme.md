@@ -1,7 +1,7 @@
 # Assessing the Impact of Compulsory Licensing on U.S. Innovation 📊
 
 ## Overview
-This project, completed as part of my Causal Inference coursework at `New York University`, replicates and analyzes results from Moser and Voena’s 2012 American Economic Review paper on the impact of the World War I Trading with the Enemy Act on U.S. domestic innovation. The focus is on how the compulsory licensing policy, which allowed U.S. firms to violate foreign patents (especially German patents) during and after the war, influenced domestic patenting activity, specifically in the organic chemicals sector.
+In this project,  completed as part of my Causal Inference coursework at `New York University`， I replicated and analyzed the findings from Moser and Voena’s 2012 American Economic Review paper, which explores the effects of the World War I Trading with the Enemy Act on U.S. domestic innovation. The policy of compulsory licensing allowed U.S. firms to produce foreign-owned inventions, particularly from Germany, without consent from patent holders. This research focuses on its impact in the organic chemicals sector, revealing a significant increase in domestic patenting activity as U.S. firms took advantage of foreign intellectual property. Difference-in-Differences analysis indicates a 20% increase in domestic invention as a result of the policy, highlighting the transformative role of compulsory licensing on innovation during that period.
 
 
 ## Objectives
