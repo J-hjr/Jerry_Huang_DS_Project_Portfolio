@@ -140,32 +140,38 @@ The scoring function f(*) is not for public.
 
 - Time Series Analysis and Visualization
 
-![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/bd3aaba0-135c-475a-ba3b-c0681e29400f)
+<!--![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/bd3aaba0-135c-475a-ba3b-c0681e29400f) -->
+![image](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/blob/main/CashFlow_Forecasting/assets/time_series_visual.png)
 
 
 - Difference in Purchase and Redemption Total Amounts from Monday to Sunday
 
-![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/a66e9deb-b701-44c5-a5a7-fbd51769e5fb)
+<!--![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/a66e9deb-b701-44c5-a5a7-fbd51769e5fb) -->
+![image](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/blob/main/CashFlow_Forecasting/assets/weekday_analysis.png)
 
 
 - Month Feature Analysis
 
-![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/d991c6ba-78e7-4f0e-abfc-6d296969d241)
+<!--![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/d991c6ba-78e7-4f0e-abfc-6d296969d241) -->
+![image](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/blob/main/CashFlow_Forecasting/assets/month_feature.png)
 
 
 - Date Feature Analysis
 
-![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/31d287e2-0b14-4e17-8114-98201596aa96)
+<!--![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/31d287e2-0b14-4e17-8114-98201596aa96) -->
+![image](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/blob/main/CashFlow_Forecasting/assets/date_feature_analysis.png)
 
 
 - Holiday Analysis
 
-![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/2d5e37a9-8404-4afd-92f4-469ceb44dbe1)
+<!--![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/2d5e37a9-8404-4afd-92f4-469ceb44dbe1) -->
+![image](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/blob/main/CashFlow_Forecasting/assets/holiday_analysis.png)
 
 
 - Analysis of Large Anomalous Transactions
 
-![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/a25f4db3-8f24-418b-b38e-bd642786573a)
+<!--![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/a25f4db3-8f24-418b-b38e-bd642786573a) -->
+![image](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/blob/main/CashFlow_Forecasting/assets/large_anomalous_transactions.png)
 
 
 - Correlation Analysis
