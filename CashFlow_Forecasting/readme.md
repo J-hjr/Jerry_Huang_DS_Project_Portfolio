@@ -171,6 +171,7 @@ The scoring function f(*) is not for public.
 - Correlation Analysis
 
 ![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/f9fba23b-b652-4a7e-97d2-8359b32cdfee)
+![image](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/blob/main/CashFlow_Forecasting/assets/correlation_analysis.png)
 
 
 - Analysis of Bank and Alipay Interest Rates
