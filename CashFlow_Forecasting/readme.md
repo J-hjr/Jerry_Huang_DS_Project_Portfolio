@@ -141,7 +141,7 @@ The scoring function f(*) is not for public.
 - Time Series Analysis and Visualization
 
 <!--![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/bd3aaba0-135c-475a-ba3b-c0681e29400f) -->
-![image](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/blob/main/CashFlow_Forecasting/assets/time_series_visual.png)
+![image](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/blob/main/CashFlow_Forecasting/assets/time_series_analysis.png)
 
 
 - Difference in Purchase and Redemption Total Amounts from Monday to Sunday
@@ -337,6 +337,8 @@ These features capture various temporal distances between data points and certai
 - `dis_from_endofweek`: Calculate the distance from the end of the week (Sunday, represented by 6) for each data point.
 
 we aim to enhance the dataset with features that capture temporal distances to various reference points, providing additional context and potentially useful insights for analysis and modeling.
+
+![image](https://ice.frostsky.com/2023/08/19/5b8b7f979b2bae65fd5c44c1f10016cd.png)
 
 <img src="https://ice.frostsky.com/2023/08/19/4a020d277668d41eb1392e3b1632390b.png" alt="4a020d277668d41eb1392e3b1632390b.png" border="0">
 
