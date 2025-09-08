@@ -1,5 +1,136 @@
+# ===========================================
+# Data Science Project Portfolio .gitignore
+# ===========================================
+
+# ===========================================
+# Python
+# ===========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ===========================================
+# Jupyter Notebook
+# ===========================================
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# ===========================================
+# R
+# ===========================================
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
-.ipynb_checkpoints/
+.Rapp.history
+
+# ===========================================
+# Data Files (Large datasets)
+# ===========================================
+*.csv
+*.xlsx
+*.xls
+*.json
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+
+# ===========================================
+# Model Files
+# ===========================================
+*.model
+*.joblib
+*.pkl
+*.h5
+*.hdf5
+
+# ===========================================
+# Environment & Config
+# ===========================================
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.conda/
+.conda-env/
+
+# ===========================================
+# IDE & Editor
+# ===========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ===========================================
+# OS Generated Files
+# ===========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ===========================================
+# Logs
+# ===========================================
+*.log
+logs/
+*.out
+
+# ===========================================
+# Temporary Files
+# ===========================================
+*.tmp
+*.temp
+temp/
+tmp/
+
+# ===========================================
+# Project Specific
+# ===========================================
+# Large data files that shouldn't be in repo
+data/raw/
+data/processed/
+data/external/
+
+# Backup files
+*（副本）*
+*_backup.*
+*.bak
+*.backup
+
+# ===========================================
+# Documentation Build
+# ===========================================
+docs/_build/
+site/
