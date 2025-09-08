@@ -1,8 +1,8 @@
 # 🎵 MelodyMind: Teaching Models to Feel Music
 
-| Project Detail | Data Link | Report Link |
+| Project Detail | Code Link | Report Link |
 |:---------------:|:---------:|:---------:|
-| [MelodyMind](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/Spotify_ML) | [Link](https://drive.google.com/drive/folders/1fTegCMoLUX1kmEcOu6uF1shaHXY8ZbeZ) | [Report Link](https://drive.google.com/drive/folders/1iqr5GBJ63totAOcuIC9Fm7XpxEzZ0Azy)
+| [MelodyMind](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/Spotify_ML) | [Link](https://drive.google.com/file/d/1IIRtFTXqwmnLFu2Dm3glAMLtkowsHMRc/view?usp=drive_link) | [Report Link](https://drive.google.com/file/d/19UbsmzK8npUCzRrLyzGOr5_tBFmwHn_Q/view?usp=drive_link)
 
 ## 🎧 Intro: Data with Soul
 
