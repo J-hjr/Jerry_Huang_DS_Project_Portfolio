@@ -1,185 +1,101 @@
-# 🎵 MelodyMind: Teaching Models to Feel Music
+# Spotify Genre Classification
 
-| Project Detail | Code Link | Report Link |
-|:---------------:|:---------:|:---------:|
-| [MelodyMind](https://github.com/J-hjr/Jerry_Huang_DS_Project_Portfolio/tree/main/Spotify_ML) | [Link](https://drive.google.com/file/d/1IIRtFTXqwmnLFu2Dm3glAMLtkowsHMRc/view?usp=drive_link) | [Report Link](https://drive.google.com/file/d/19UbsmzK8npUCzRrLyzGOr5_tBFmwHn_Q/view?usp=drive_link)
+This project examines how well Spotify-style audio and metadata features can distinguish between ten music genres. It combines exploratory analysis, dimensionality reduction, clustering, and supervised classification on a balanced dataset of approximately 50,000 tracks.
 
-## 🎧 Intro: Data with Soul
+[View the notebook](./Jerry_Huang_Spotify.ipynb) · [Read the report](./Jerry_Huang_Spotify_report.pdf) · [Portfolio](https://jerryhjr.space/spotify-genre-classification-model)
 
-When I started this project, I wasn't just building another machine learning model: I was teaching a computer to *feel* music the way we do. Every song tells a story, and I wanted to help **Machine Learning Models** understand that story through the language of audio features.
+## Problem
 
-This project explores how we can bridge the gap between human musical intuition and machine learning algorithms, creating systems that don't just classify music, but *understand* it.
+Genre labels are useful for catalog organization and music discovery, but their boundaries are often subjective and overlapping. The goal of this project is to measure how much genre information can be recovered from structured track features alone, without using raw audio or lyrics.
 
-## 🚀 Mission
+The target classes are:
 
-Music streaming platforms like Spotify have millions of songs, but how do they know what makes a jazz track different from electronic music? How can we teach machines to recognize the soul in a blues guitar solo or the energy in a hip-hop beat?
+- Alternative
+- Anime
+- Blues
+- Classical
+- Country
+- Electronic
+- Hip-Hop
+- Jazz
+- Rap
+- Rock
 
-I set out to build a system that could:
+Each class contains approximately 5,000 tracks.
 
-- **Listen** to music the way humans do
-- **Understand** the subtle differences between genres
-- **Learn** from 50,000 songs across 10 different musical styles
-- **Predict** what genre a song belongs to with human-like accuracy
+## Data and Features
 
-## 🎼 The Music That Taught Me
+The model uses track-level features including:
 
-**Data Source**: Spotify Music Database
+- popularity
+- danceability
+- energy
+- loudness
+- speechiness
+- acousticness
+- instrumentalness
+- liveness
+- valence
+- key and mode
 
-**Size**: 50,000 songs (5,000 per genre)
+Missing duration and tempo values are replaced with their medians, and the remaining incomplete rows are removed. The data is split into 90% training and 10% testing sets with stratification by genre. Numerical features are standardized using parameters learned from the training set only.
 
-**Genres**: Alternative, Anime, Blues, Classical, Country, Electronic, Hip-Hop, Jazz, Rap, Rock
+## Analysis
 
-### What Makes Each Song Unique:
+The project includes four complementary stages:
 
-- **The Soul**: danceability, energy, acousticness, instrumentalness, valence
-- **The Rhythm**: tempo, loudness, speechiness, liveness
-- **The Story**: popularity, duration, key, mode
+1. **Exploration:** compare feature distributions across genres.
+2. **Dimensionality reduction:** use PCA, t-SNE, UMAP, and LDA to inspect class structure.
+3. **Clustering:** test whether K-Means clusters align with the labeled genres.
+4. **Classification:** compare logistic regression, decision tree, random forest, SVM, K-nearest neighbors, XGBoost, and a multilayer perceptron.
 
-> This wasn't just data. It was 50,000 musical stories waiting to be understood. Each song had its own personality, its own way of making people feel, and I wanted to teach Machine Learning Models to recognize that personality.
-> 
+## Results
 
-## 🔧 What I Built
+The strongest models in the initial comparison were:
 
-### 🎯 1. **The Art of Listening (Data Preprocessing)**
+| Model | Accuracy | Macro F1 | Macro AUC |
+| --- | ---: | ---: | ---: |
+| Neural network | 0.566 | 0.555 | 0.928 |
+| XGBoost | 0.562 | 0.562 | 0.927 |
+| SVM | 0.570 | 0.566 | 0.923 |
 
-- Cleaned and prepared **50,000 songs** from Spotify's database, handling missing values and inconsistencies with care
-- Transformed raw audio features into a language that machines could understand
-- Used **Python** and `pandas` to ensure every song's story was preserved in the data
+After PCA and hyperparameter tuning, the neural network reached:
 
-### 🧠 2. **Teaching AI to See Music (Dimensionality Reduction)**
+- **Test accuracy:** 0.572
+- **Macro F1:** 0.569
+- **Macro one-vs-rest AUC:** 0.929
 
-- **PCA**: Showed AI the big picture—how genres differ globally
-- **t-SNE**: Helped AI understand the subtle relationships between similar songs
-- **UMAP**: Balanced both perspectives for deeper musical insights
-- **LDA**: Used genre labels to teach AI the most important differences
+The difference between AUC and accuracy is important. The model ranks the correct genre relatively well against each alternative class, but choosing a single label remains difficult because several genres occupy overlapping regions of the feature space.
 
-### 🎵 3. **The Learning Process (Machine Learning Models)**
+The projections and confusion patterns show that Classical is comparatively distinct, while Hip-Hop and Rap share similar characteristics. Rock, Electronic, and several neighboring genres are also difficult to separate using structured features alone.
 
-- Trained **7 different algorithms** to find the best way to "hear" music
-- **Random Forest**: The reliable friend (62.3% accuracy)
-- **Neural Networks**: The deep thinker (92.9% AUC)
-- **XGBoost**: The balanced performer
-- Each model learned to recognize music in its own unique way
+## Repository Contents
 
-### 📊 4. **Making Music Visible (Visualization & Analysis)**
+| File | Description |
+| --- | --- |
+| [`Jerry_Huang_Spotify.ipynb`](./Jerry_Huang_Spotify.ipynb) | Complete analysis and model comparison |
+| [`Jerry_Huang_Spotify_report.pdf`](./Jerry_Huang_Spotify_report.pdf) | Project report |
+| `musicData.csv` | Dataset used by the notebook |
 
-- Created visualizations that showed how different genres cluster together
-- Built dashboards that revealed the hidden patterns in music
-- Discovered what makes each genre special through data storytelling
+## Run Locally
 
-## 💡 Key Discoveries
-
-### 🎼 What I Learned About Music
-
-Through this journey, I discovered that each genre has its own musical DNA:
-
-- **Classical Music**: The soulful storyteller (high acousticness, low energy, longer duration)
-- **Electronic Music**: The energetic innovator (high energy, low acousticness, synthetic sounds)
-- **Hip-Hop**: The rhythmic poet (high speechiness, moderate energy, rhythmic patterns)
-- **Jazz**: The complex artist (moderate energy, high instrumentalness, complex harmonies)
-
-### 🧠 What I Learned About AI
-
-The best-performing model achieved **92.9% AUC** using a neural network—not just impressive numbers, but proof that AI can learn to feel music almost as well as we do.
-
-### 🌟 The Real Magic
-
-This wasn't just about building a classifier. It was about:
-
-- **Understanding** how music touches our souls
-- **Teaching** machines to recognize emotion in sound
-- **Creating** systems that could help people discover music they'll love
-- **Bridging** the gap between human creativity and artificial intelligence
-
-> The best music classification isn't just accurate, as it could be humanized. It understands that a blues guitar solo and a jazz saxophone solo are different kinds of soul, even if they share similar technical features.
-> 
-
-## 🎓 What This Taught Me
-
-### The Art of Listening
-
-This project taught me that data analysis isn't just about numbers—it's about understanding the stories behind the data. Working with music data showed me how to find meaning in patterns and translate technical insights into human understanding.
-
-### The Science of Feeling
-
-I learned to build systems that don't just process information, but *understand* it. Teaching AI to recognize musical emotion taught me that the best technology is the kind that feels human.
-
-### The Power of Storytelling
-
-Through visualization and analysis, I discovered how to make complex data tell compelling stories. Every chart, every insight became a way to share the magic of music with others.
-
-### The Bridge Between Art and Science
-
-This project showed me how to balance technical precision with creative intuition—how to build systems that respect both the art of music and the science of data.
-
-## 🛠️ The Technical Journey
-
-### Tools That Made It Possible
-
-- **Python**: The language that let me speak to music data
-- **Jupyter Notebook**: My creative canvas for exploration
-- **Pandas & NumPy**: The tools that helped me understand 50,000 songs
-- **Scikit-learn**: The algorithms that learned to feel music
-- **Matplotlib & Seaborn**: The brushes that painted data stories
-- **XGBoost**: The ensemble method that brought it all together
-
-### The Process
-
-1. **Listening**: Clean and prepare audio features with care
-2. **Understanding**: Explore patterns and relationships in the data
-3. **Seeing**: Use dimensionality reduction to visualize musical landscapes
-4. **Learning**: Train multiple algorithms to find the best approach
-5. **Evaluating**: Measure success not just by accuracy, but by understanding
-6. **Sharing**: Create visualizations that tell the story of music
-
-## 🌟 The Bigger Picture
-
-This project showed me that the future of music technology isn't just about better algorithms—it's about creating systems that understand the human experience of music. Every song has a story, and models can help us tell those stories better.
-
-> This was not only a machine learning project, but was a journey into understanding how technology can connect with the most human part of us: our love for music.
-> 
-
-## 🚀 Ready to Explore?
-
-### Prerequisites
+Install the required packages:
 
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn xgboost umap-learn jupyter
 ```
 
-### How to Start Your Own Journey
+Start Jupyter and open the notebook:
 
-1. Clone this repository
-2. Open `Jerry_Huang_Spotify.ipynb` in Jupyter Notebook
-3. Run all cells to see the magic unfold
-4. Let the music data tell you its story
-
-### What You'll Find
-
-```
-├── Jerry_Huang_Spotify.ipynb    # The complete musical journey
-├── musicData.csv                     # 50,000 songs waiting to be heard
-├── Jerry_Huang_Spotify_report.pdf    # The full story in detail
-└── README.md                         # This file
+```bash
+jupyter lab Jerry_Huang_Spotify.ipynb
 ```
 
-## About the Creator
+Run the notebook from the `Spotify_ML` directory so that the relative dataset path resolves correctly.
 
-**Jerry Huang**
+## Limitations
 
-*New York University*
-
-*Data Science & Computer Science + Music*
-
-*"Every data point has a story. My job is to help that story be heard."*
-
-## 🙏 Acknowledgments
-
-- **Spotify** for sharing the music that taught me
-- **The open source community** for building the tools that made this possible
-- **NYU professor** for guiding me on this journey
-- **Every musician** whose work became part of this story
-
----
-
-*This project isn't just about teaching Machine Learning Models to classify music: it's about understanding how technology can connect with the most human part of us: our love for music.*
+- The models use structured track features rather than raw audio, lyrics, or listener behavior.
+- The balanced class distribution is useful for comparison but does not represent the distribution of music in a real catalog.
+- Genre labels can be subjective, and closely related genres may not have clean statistical boundaries.
+- Results are based on one held-out test split; repeated or nested cross-validation would provide a stronger estimate of generalization.

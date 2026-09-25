@@ -23,8 +23,8 @@ I build data products and machine learning systems, with a focus on music intell
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="./Spotify_ML">Spotify Popularity Modeling</a></h3>
-      <p>An applied machine learning study of the audio and metadata features associated with song popularity, including model comparison and interpretation.</p>
+      <h3><a href="./Spotify_ML">Spotify Genre Classification</a></h3>
+      <p>A multiclass classification study of how well structured audio and metadata features distinguish between ten music genres.</p>
       <p><code>Python</code> <code>scikit-learn</code> <code>Statistical Analysis</code> <code>Model Interpretation</code></p>
     </td>
     <td width="50%" valign="top">
